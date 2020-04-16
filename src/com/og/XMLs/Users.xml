@@ -7,10 +7,10 @@
         <fullName>a</fullName>
     </user>
     <user>
-        <login>b</login>
-        <password>b</password>
-        <position>b</position>
-        <fullName>b</fullName>
+        <login>admin</login>
+        <password>1234</password>
+        <position>admin</position>
+        <fullName>Maxim V N</fullName>
     </user>
     <user>
         <login>c</login>

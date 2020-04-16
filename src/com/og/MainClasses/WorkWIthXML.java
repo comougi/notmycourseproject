@@ -58,13 +58,11 @@ public class WorkWIthXML {
 
             User u = new User(login, password);
             for (int i = 0; i < userList.size(); i++) {
-                if (userList.get(0).equals(u)) {
+                if (u.getLogin() == userList.get(i).getLogin() && u.getPassword() == userList.get(i).getPassword()) {
                     FXMLHelper.loadScreen("RegistrationScreen");
                 }
             }
             // печатаем в консоль информацию по каждому объекту User
-
-
             for (User user : userList) {
                 System.out.println(user.toString());
             }
