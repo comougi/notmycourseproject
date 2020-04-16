@@ -32,4 +32,10 @@
 <position>admin</position>
 <fullName>qqq</fullName>
 </user>
+<user>
+<login>sel</login>
+<password>s</password>
+<position>seller</position>
+<fullName>L K O</fullName>
+</user>
 </users>

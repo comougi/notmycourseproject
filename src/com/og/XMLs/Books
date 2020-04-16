@@ -5,7 +5,7 @@
         <author>Richards</author>
         <genre>bio</genre>
         <amount>4</amount>
-        <inShop>true</inShop>
+        <inShop>false</inShop>
     </book>
 
     <book>

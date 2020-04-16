@@ -1,6 +1,7 @@
 package com.og.MainClasses;
 
 import com.og.Controllers.AdminScreenController;
+import com.og.Controllers.SellerScreenController;
 import com.og.FXMLHelper;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -74,6 +75,21 @@ public class WorkWIthXML {
             exc.printStackTrace();
         }
         return bookList;
+    }
+
+    public static List<Book> returnBooksInShop() {
+        List<Book> bookList = returnBooks();
+        List<Book> bookInShopList = new ArrayList<Book>();
+        try {
+            for (int i = 0; i < bookList.size(); i++) {
+                if (bookList.get(i).isInShop()) {
+                    bookInShopList.add(bookList.get(i));
+                }
+            }
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
+        return bookInShopList;
     }
 
     public static void addBook(String title, String author, String genre) {
@@ -159,7 +175,9 @@ public class WorkWIthXML {
                     adminScreenController.showAllBooks();
                     adminScreenController.userInfo();
                 } else if (userList.get(i).getPosition().equals("seller")) {
-                    FXMLHelper.loadScreen("SellerScreen");
+                    SellerScreenController sellerScreenController = FXMLHelper.loadScreenReturnController("SellerScreen");
+                    sellerScreenController.userInfo();
+                    sellerScreenController.showAllBooksInShop();
                 } else if (userList.get(i).getPosition().equals("store keeper")) {
                     FXMLHelper.loadScreen("StoreKeeperScreen");
                 }
