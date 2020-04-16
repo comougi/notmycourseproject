@@ -25,9 +25,7 @@ public class StartScreenController extends WorkWIthXML {
             passwordField.clear();
             return;
         }
-
         validation(login, password);
-
     }
 
 

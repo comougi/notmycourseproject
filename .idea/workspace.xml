@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82ed9098-a70a-4502-889a-e3edd88d3a36" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/og/MainClasses/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/og/XMLs/Books" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/courseproject/com/og/Controllers/RegistrationScreenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/courseproject/com/og/Controllers/RegistrationScreenController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/courseproject/com/og/Controllers/StartScreenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/courseproject/com/og/Controllers/StartScreenController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/courseproject/com/og/MainClasses/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/courseproject/com/og/MainClasses/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/courseproject/com/og/MainClasses/WorkWIthXML.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/courseproject/com/og/MainClasses/WorkWIthXML.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/courseproject/com/og/XMLs/Users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/courseproject/com/og/XMLs/Users.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/AdminScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/AdminScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/StartScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/StartScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/StoreKeeperScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/StoreKeeperScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/og/MainClasses/WorkWIthXML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/MainClasses/WorkWIthXML.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/UI/AdminScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/UI/AdminScreen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587054044406</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add product table on AdminScreen">
+      <created>1587056352290</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1587056352290</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -159,7 +161,8 @@
     <MESSAGE value="modify validation method" />
     <MESSAGE value="update registration method" />
     <MESSAGE value="add position screens and controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="add position screens and controllers" />
+    <MESSAGE value="add product table on AdminScreen" />
+    <option name="LAST_COMMIT_MESSAGE" value="add product table on AdminScreen" />
   </component>
   <component name="WindowStateProjectService">
     <state x="536" y="219" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587054151760">
@@ -170,10 +173,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="574" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1587055275350" />
-    <state x="421" y="0" key="CommitChangelistDialog2" timestamp="1587054043545">
+    <state x="421" y="0" key="CommitChangelistDialog2" timestamp="1587056351277">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="421" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1587054043545" />
+    <state x="421" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1587056351277" />
     <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1587054549891">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -202,9 +205,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="349" y="160" key="IDE.errors.dialog/0.0.1536.834@0.0.1536.834" timestamp="1587046489149" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1587054050956">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1587056354385">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1587054050956" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1587056354385" />
   </component>
 </project>

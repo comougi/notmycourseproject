@@ -51,7 +51,7 @@ public class WorkWIthXML {
         return node.getNodeValue();
     }
 
-    public static List<Book> returnBookByTag() {
+    public static List<Book> returnBooks() {
         File xmlFile = new File("src/com/og/XMLs/Books");
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder;
@@ -73,37 +73,42 @@ public class WorkWIthXML {
         return bookList;
     }
 
-    public void validation(String login, String password) {
+    public List<User> returnUsers() {
         File xmlFile = new File("src/com/og/XMLs/Users.xml");
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder;
+        List<User> userList = new ArrayList<User>();
         try {
             builder = factory.newDocumentBuilder();
             Document document = builder.parse(xmlFile);
             document.getDocumentElement().normalize();
             NodeList nodeList = document.getElementsByTagName("user");
-
-            List<User> userList = new ArrayList<User>();
             for (int i = 0; i < nodeList.getLength(); i++) {
                 userList.add(getUser(nodeList.item(i)));
             }
-
-            User u = new User(login, password);
-            for (int i = 0; i < userList.size(); i++) {
-                if (u.getLogin().equals(userList.get(i).getLogin()) && u.getPassword().equals(userList.get(i).getPassword())) {
-                    if (userList.get(i).getPosition().equals("admin")) {
-                        AdminScreenController adminScreenController = FXMLHelper.loadScreenReturnController("AdminScreen");
-                        adminScreenController.showAllBooks();
-                    } else if (userList.get(i).getPosition().equals("seller")) {
-                        FXMLHelper.loadScreen("SellerScreen");
-                    } else if (userList.get(i).getPosition().equals("store keeper")) {
-                        FXMLHelper.loadScreen("StoreKeeperScreen");
-                    }
-                }
-            }
-
         } catch (Exception exc) {
             exc.printStackTrace();
+        }
+        return userList;
+    }
+
+    public void validation(String login, String password) {
+        User u = new User(login, password);
+        List<User> userList = returnUsers();
+
+        for (int i = 0; i < userList.size(); i++) {
+            if (u.getLogin().equals(userList.get(i).getLogin()) && u.getPassword().equals(userList.get(i).getPassword())) {
+                u.activeUser = userList.get(i);
+                if (userList.get(i).getPosition().equals("admin")) {
+                    AdminScreenController adminScreenController = FXMLHelper.loadScreenReturnController("AdminScreen");
+                    adminScreenController.showAllBooks();
+                    adminScreenController.userInfo();
+                } else if (userList.get(i).getPosition().equals("seller")) {
+                    FXMLHelper.loadScreen("SellerScreen");
+                } else if (userList.get(i).getPosition().equals("store keeper")) {
+                    FXMLHelper.loadScreen("StoreKeeperScreen");
+                }
+            }
         }
     }
 

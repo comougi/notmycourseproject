@@ -1,6 +1,7 @@
 package com.og.Controllers;
 
 import com.og.MainClasses.Book;
+import com.og.MainClasses.User;
 import com.og.MainClasses.WorkWIthXML;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -29,12 +30,18 @@ public class AdminScreenController {
     private TableColumn<Book, String> genreColumn;
 
     public void showAllBooks() {
-        books = WorkWIthXML.returnBookByTag();
+        books = WorkWIthXML.returnBooks();
 
         titleColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("title"));
         authorColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("author"));
         genreColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("genre"));
 
         booksTable.getItems().setAll(books);
+    }
+
+    public void userInfo() {
+        if (User.activeUser != null) {
+fullNameLabel.setText(String.format("Position: %s\nFull name: %s",User.activeUser.getPosition(),User.activeUser.getFullName()));
+        }
     }
 }
