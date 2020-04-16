@@ -14,8 +14,6 @@ import java.util.List;
 
 public class WorkWIthXML {
 
-
-    // создаем из узла документа объект Language
     private static User getUser(Node node) {
         User user = new User();
         if (node.getNodeType() == Node.ELEMENT_NODE) {
@@ -29,14 +27,13 @@ public class WorkWIthXML {
         return user;
     }
 
-    // получаем значение элемента по указанному тегу
     private static String getTagValue(String tag, Element element) {
         NodeList nodeList = element.getElementsByTagName(tag).item(0).getChildNodes();
         Node node = nodeList.item(0);
         return node.getNodeValue();
     }
 
-    public void read(String login, String password) {
+    public void validation(String login, String password) {
         File xmlFile = new File("src/com/og/XMLs/Users.xml");
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder;
@@ -44,13 +41,8 @@ public class WorkWIthXML {
             builder = factory.newDocumentBuilder();
             Document document = builder.parse(xmlFile);
             document.getDocumentElement().normalize();
-            System.out.println("Корневой элемент: " + document.getDocumentElement().getNodeName());
-            // получаем узлы с именем User
-            // теперь XML полностью загружен в память
-            // в виде объекта Document
             NodeList nodeList = document.getElementsByTagName("user");
 
-            // создадим из него список объектов User
             List<User> userList = new ArrayList<User>();
             for (int i = 0; i < nodeList.getLength(); i++) {
                 userList.add(getUser(nodeList.item(i)));
@@ -58,15 +50,10 @@ public class WorkWIthXML {
 
             User u = new User(login, password);
             for (int i = 0; i < userList.size(); i++) {
-                if (u.getLogin() == userList.get(i).getLogin() && u.getPassword() == userList.get(i).getPassword()) {
+                if (u.getLogin().equals(userList.get(i).getLogin()) && u.getPassword().equals(userList.get(i).getPassword())) {
                     FXMLHelper.loadScreen("RegistrationScreen");
                 }
             }
-            // печатаем в консоль информацию по каждому объекту User
-            for (User user : userList) {
-                System.out.println(user.toString());
-            }
-
 
         } catch (Exception exc) {
             exc.printStackTrace();

@@ -5,15 +5,18 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-public class StartScreenController extends WorkWIthXML{
+public class StartScreenController extends WorkWIthXML {
     public PasswordField passwordField;
     public TextField loginField;
 
     public void onButtonLogInClick(ActionEvent actionEvent) {
         String login = loginField.getText();
         String password = passwordField.getText();
+        validation(login, password);
+    }
 
 
-        read(login,password);
+    public void onButtonRegistrationClick(ActionEvent actionEvent) {
+
     }
 }
