@@ -61,7 +61,7 @@ public class SellerScreenController {
 
         Book selectedBook = books.get(selectedIndex);
         selectedBook.setAmount(selectedBook.getAmount() - 1);
-        XMLUpdate.updater(selectedBook.getTitle());
+        XMLUpdate.updater(selectedBook.getTitle(),"Books");
         booksInShopTable.getItems().setAll(books);
         XMLAdd.addSale(selectedBook.getTitle(), selectedBook.getAmount());
     }

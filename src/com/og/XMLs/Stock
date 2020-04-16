@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <books>
     <book>
         <title>God's Father</title>
@@ -16,4 +16,25 @@
         <amount>10</amount>
     </book>
 
+<book>
+<title>a</title>
+<author>a</author>
+<genre>a</genre>
+<inShop>false</inShop>
+<amount>1</amount>
+</book>
+<book>
+<title>b</title>
+<author>b</author>
+<genre>b</genre>
+<inShop>false</inShop>
+<amount>2</amount>
+</book>
+<book>
+<title>q</title>
+<author>q</author>
+<genre>q</genre>
+<inShop>false</inShop>
+<amount>4</amount>
+</book>
 </books>

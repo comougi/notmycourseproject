@@ -20,6 +20,10 @@ public class AddInStockScreenController {
 
         XMLAdd.addIn(title, author, genre, amount, "Stock", "book");
 
+        StoreKeeperScreenController storeKeeperScreenController = FXMLHelper.loadScreenReturnController("StoreKeeperScreen");
+        storeKeeperScreenController.userInfo();
+        storeKeeperScreenController.showNeedItList();
+        storeKeeperScreenController.showBooksInStock();
     }
 
 

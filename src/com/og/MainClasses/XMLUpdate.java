@@ -16,8 +16,8 @@ import java.io.File;
 import java.util.List;
 
 public class XMLUpdate {
-    public static void updater(String title) {
-        String filePath = "src/com/og/XMLs/Books";
+    public static void updater(String title,String file) {
+        String filePath = String.format("src/com/og/XMLs/%s",file);
         File xmlFile = new File(filePath);
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder;

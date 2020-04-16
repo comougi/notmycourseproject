@@ -1,47 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <users>
-    <user>
-        <login>a</login>
-        <password>a</password>
-        <position>a</position>
-        <fullName>a</fullName>
-    </user>
+
     <user>
         <login>admin</login>
-        <password>1234</password>
+        <password>a</password>
         <position>admin</position>
         <fullName>Maxim V N</fullName>
     </user>
     <user>
-        <login>c</login>
-        <password>c</password>
-        <position>c</position>
-        <fullName>c</fullName>
+        <login>seller</login>
+        <password>s</password>
+        <position>seller</position>
+        <fullName>Maxim V N</fullName>
     </user>
 
     <user>
-        <login>h</login>
-        <password>h</password>
-        <position>h</position>
-        <fullName>h</fullName>
+        <login>storekeeper</login>
+        <password>sk</password>
+        <position>store keeper</position>
+        <fullName>Maxim V N</fullName>
     </user>
 
-<user>
-<login>maxim</login>
-<password>qqq</password>
-<position>admin</position>
-<fullName>qqq</fullName>
-</user>
-<user>
-<login>sel</login>
-<password>s</password>
-<position>seller</position>
-<fullName>L K O</fullName>
-</user>
-<user>
-<login>loh</login>
-<password>z</password>
-<position>store keeper</position>
-<fullName>Z A D</fullName>
-</user>
 </users>

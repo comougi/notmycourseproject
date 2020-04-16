@@ -15,4 +15,75 @@
         <amount>4</amount>
         <inShop>true</inShop>
     </book>
+
+    <book>
+        <title>My life</title>
+        <author>Richards</author>
+        <genre>bio</genre>
+        <amount>1</amount>
+        <inShop>true</inShop>
+    </book>
+    <book>
+        <title>God's Father</title>
+        <author>Pyuzo</author>
+        <genre>Criminal</genre>
+        <amount>1</amount>
+        <inShop>true</inShop>
+    </book>
+<book>
+<title>My life</title>
+<author>Richards</author>
+<genre>bio</genre>
+<amount>1</amount>
+<inShop>true</inShop>
+</book>
+<book>
+<title>God's Father</title>
+<author>Pyuzo</author>
+<genre>Criminal</genre>
+<amount>1</amount>
+<inShop>true</inShop>
+</book>
+<book>
+<title>My life</title>
+<author>Richards</author>
+<genre>bio</genre>
+<amount>1</amount>
+<inShop>true</inShop>
+</book>
+<book>
+<title>My life</title>
+<author>Richards</author>
+<genre>bio</genre>
+<amount>1</amount>
+<inShop>true</inShop>
+</book>
+<book>
+<title>My life</title>
+<author>Richards</author>
+<genre>bio</genre>
+<amount>1</amount>
+<inShop>true</inShop>
+</book>
+<book>
+<title>God's Father</title>
+<author>Pyuzo</author>
+<genre>Criminal</genre>
+<amount>1</amount>
+<inShop>true</inShop>
+</book>
+<book>
+<title>My life</title>
+<author>Richards</author>
+<genre>bio</genre>
+<amount>1</amount>
+<inShop>true</inShop>
+</book>
+<book>
+<title>q</title>
+<author>q</author>
+<genre>q</genre>
+<amount>1</amount>
+<inShop>true</inShop>
+</book>
 </books>

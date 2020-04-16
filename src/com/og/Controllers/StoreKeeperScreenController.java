@@ -1,10 +1,7 @@
 package com.og.Controllers;
 
 import com.og.FXMLHelper;
-import com.og.MainClasses.Book;
-import com.og.MainClasses.User;
-import com.og.MainClasses.XMLAdd;
-import com.og.MainClasses.XMLReturn;
+import com.og.MainClasses.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -37,7 +34,7 @@ public class StoreKeeperScreenController {
 
 
     public void showBooksInStock() {
-        books1 = XMLReturn.returnBooksIn("Stock","book");
+        books1 = XMLReturn.returnBooksIn("Stock", "book");
 
         titleStockColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("title"));
         amountStockColumn.setCellValueFactory(new PropertyValueFactory<Book, Integer>("amount"));
@@ -46,7 +43,7 @@ public class StoreKeeperScreenController {
     }
 
     public void showNeedItList() {
-        books2 = XMLReturn.returnBooksIn("NeedIt","need");
+        books2 = XMLReturn.returnBooksIn("NeedIt", "need");
 
         titleNeedColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("title"));
         amountNeedColumn.setCellValueFactory(new PropertyValueFactory<Book, Integer>("amount"));
@@ -68,9 +65,8 @@ public class StoreKeeperScreenController {
         }
         Book selectedBook = books1.get(selectedIndex);
         XMLAdd.addIn(selectedBook.getTitle(), selectedBook.getAuthor(), selectedBook.getGenre(), 5, "Delivery", "book");
-        AdminScreenController adminScreenController = FXMLHelper.loadScreenReturnController("AdminScreen");
-        adminScreenController.showAllBooks();
-        adminScreenController.userInfo();
+        selectedBook.setAmount(selectedBook.getAmount() - 1);
+        inStockTable.getItems().setAll(books1);
     }
 
     public void onButtonLogOutCLick(ActionEvent actionEvent) {
