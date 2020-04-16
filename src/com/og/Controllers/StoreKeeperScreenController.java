@@ -1,9 +1,7 @@
 package com.og.Controllers;
 
 import com.og.FXMLHelper;
-import com.og.MainClasses.Book;
-import com.og.MainClasses.User;
-import com.og.MainClasses.WorkWIthXML;
+import com.og.MainClasses.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -36,7 +34,7 @@ public class StoreKeeperScreenController {
 
 
     public void showBooksInStock() {
-        books1 = WorkWIthXML.returnBooksInStock();
+        books1 = XMLReturn.returnBooksInStock();
 
         titleStockColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("title"));
         amountStockColumn.setCellValueFactory(new PropertyValueFactory<Book, Integer>("amount"));
@@ -45,7 +43,7 @@ public class StoreKeeperScreenController {
     }
 
     public void showNeedItList() {
-        books2 = WorkWIthXML.returnBooksInNeedIt();
+        books2 = XMLReturn.returnBooksInNeedIt();
 
         titleNeedColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("title"));
         amountNeedColumn.setCellValueFactory(new PropertyValueFactory<Book, Integer>("amount"));
@@ -67,7 +65,7 @@ public class StoreKeeperScreenController {
         }
 
         Book selectedBook = books1.get(selectedIndex);
-        WorkWIthXML.addInDelivery(selectedBook.getTitle(), selectedBook.getAuthor(), selectedBook.getGenre());
+        XMLAdd.addInDelivery(selectedBook.getTitle(), selectedBook.getAuthor(), selectedBook.getGenre());
     }
 
     public void onButtonLogOutCLick(ActionEvent actionEvent) {

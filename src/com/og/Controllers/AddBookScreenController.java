@@ -1,7 +1,7 @@
 package com.og.Controllers;
 
 import com.og.FXMLHelper;
-import com.og.MainClasses.WorkWIthXML;
+import com.og.MainClasses.XMLAdd;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
 
@@ -20,6 +20,6 @@ public class AddBookScreenController {
         String author = authorField.getText();
         String genre = genreField.getText();
 
-        WorkWIthXML.addBook(title, author, genre);
+        XMLAdd.addBook(title, author, genre);
     }
 }

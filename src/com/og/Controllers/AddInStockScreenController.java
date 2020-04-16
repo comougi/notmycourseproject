@@ -1,7 +1,7 @@
 package com.og.Controllers;
 
 import com.og.FXMLHelper;
-import com.og.MainClasses.WorkWIthXML;
+import com.og.MainClasses.XMLAdd;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
 
@@ -18,7 +18,7 @@ public class AddInStockScreenController {
         String genre = genreField.getText();
         int amount=Integer.parseInt(amountField.getText());
 
-        WorkWIthXML.addBookInStock(title,author,genre,amount);
+        XMLAdd.addBookInStock(title,author,genre,amount);
 
     }
 

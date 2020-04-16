@@ -1,9 +1,7 @@
 package com.og.Controllers;
 
 import com.og.FXMLHelper;
-import com.og.MainClasses.Book;
-import com.og.MainClasses.User;
-import com.og.MainClasses.WorkWIthXML;
+import com.og.MainClasses.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -34,7 +32,7 @@ public class SellerScreenController {
     private TableColumn<Book, Integer> amountColumn;
 
     public void showAllBooksInShop() {
-        books = WorkWIthXML.returnBooksInShop();
+        books = XMLReturn.returnBooksInShop();
 
         titleColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("title"));
         authorColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("author"));
@@ -63,9 +61,9 @@ public class SellerScreenController {
 
         Book selectedBook = books.get(selectedIndex);
         selectedBook.setAmount(selectedBook.getAmount() - 1);
-        WorkWIthXML.updater(selectedBook.getTitle());
+        XMLUpdate.updater(selectedBook.getTitle());
         booksInShopTable.getItems().setAll(books);
-        WorkWIthXML.addSale(selectedBook.getTitle(), selectedBook.getAmount());
+        XMLAdd.addSale(selectedBook.getTitle(), selectedBook.getAmount());
     }
 
     public void onButtonNeedItClick(ActionEvent actionEvent) {
@@ -75,7 +73,12 @@ public class SellerScreenController {
         }
 
         Book selectedBook = books.get(selectedIndex);
-        WorkWIthXML.addInNeedIt(selectedBook.getTitle(), selectedBook.getAuthor(), selectedBook.getGenre());
+        XMLAdd.addInNeedIt(selectedBook.getTitle(), selectedBook.getAuthor(), selectedBook.getGenre());
+        booksInShopTable.getItems().setAll(books);
+    }
+
+    public void onButtonFromStockClick(ActionEvent actionEvent) {
+        XMLAdd.addFromStockToShop();
         booksInShopTable.getItems().setAll(books);
     }
 }

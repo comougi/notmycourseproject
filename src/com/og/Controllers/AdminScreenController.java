@@ -3,7 +3,7 @@ package com.og.Controllers;
 import com.og.FXMLHelper;
 import com.og.MainClasses.Book;
 import com.og.MainClasses.User;
-import com.og.MainClasses.WorkWIthXML;
+import com.og.MainClasses.XMLReturn;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -32,7 +32,7 @@ public class AdminScreenController {
     private TableColumn<Book, String> genreColumn;
 
     public void showAllBooks() {
-        books = WorkWIthXML.returnBooks();
+        books = XMLReturn.returnBooks();
 
         titleColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("title"));
         authorColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("author"));

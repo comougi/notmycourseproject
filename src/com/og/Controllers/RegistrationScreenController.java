@@ -1,12 +1,12 @@
 package com.og.Controllers;
 
-import com.og.MainClasses.WorkWIthXML;
+import com.og.MainClasses.XMLAdd;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-public class RegistrationScreenController extends WorkWIthXML {
+public class RegistrationScreenController {
 
     public TextField loginField;
     public PasswordField passwordField;
@@ -35,13 +35,13 @@ public class RegistrationScreenController extends WorkWIthXML {
 
         switch (position) {
             case "admin":
-                addUser(login, password, position, fullName);
+                XMLAdd.addUser(login, password, position, fullName);
                 break;
             case "seller":
-                addUser(login, password, position, fullName);
+                XMLAdd.addUser(login, password, position, fullName);
                 break;
             case "store keeper":
-                addUser(login, password, position, fullName);
+                XMLAdd.addUser(login, password, position, fullName);
                 break;
             default:
                 Alert alert = new Alert(Alert.AlertType.WARNING);

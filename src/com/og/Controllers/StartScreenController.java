@@ -1,13 +1,13 @@
 package com.og.Controllers;
 
 import com.og.FXMLHelper;
-import com.og.MainClasses.WorkWIthXML;
+import com.og.MainClasses.XMLReturn;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-public class StartScreenController extends WorkWIthXML {
+public class StartScreenController {
     public PasswordField passwordField;
     public TextField loginField;
 
@@ -25,7 +25,7 @@ public class StartScreenController extends WorkWIthXML {
             passwordField.clear();
             return;
         }
-        validation(login, password);
+        XMLReturn.validation(login, password);
     }
 
 

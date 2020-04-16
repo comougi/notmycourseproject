@@ -16,7 +16,7 @@
       </TableView>
       <Button layoutX="34.0" layoutY="338.0" mnemonicParsing="false" onAction="#onButtonLogOutClick" text="Log out" />
       <Button layoutX="441.0" layoutY="303.0" mnemonicParsing="false" onAction="#onButtonSellClick" text="Sell" />
-      <Button layoutX="421.0" layoutY="338.0" mnemonicParsing="false" text="From stock" />
+      <Button onAction="#onButtonFromStockClick" layoutX="421.0" layoutY="338.0" mnemonicParsing="false" text="From stock" />
       <Button onAction="#onButtonNeedItClick" layoutX="470.0" layoutY="200.0" mnemonicParsing="false" text="Need it" />
    </children>
 </AnchorPane>
