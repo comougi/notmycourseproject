@@ -2,14 +2,33 @@
 <needs>
     <need>
         <title>President</title>
+        <author>Solovyev</author>
+        <genre>bio</genre>
+        <inShop>false</inShop>
         <amount>5</amount>
     </need>
+
     <need>
         <title>President</title>
+        <author>Solovyev</author>
+        <genre>bio</genre>
+        <inShop>false</inShop>
         <amount>5</amount>
     </need>
+
     <need>
         <title>President</title>
+        <author>Solovyev</author>
+        <genre>bio</genre>
+        <inShop>false</inShop>
+        <amount>5</amount>
+    </need>
+
+    <need>
+        <title>President</title>
+        <author>Solovyev</author>
+        <genre>bio</genre>
+        <inShop>false</inShop>
         <amount>5</amount>
     </need>
 </needs>

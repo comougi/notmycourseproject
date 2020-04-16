@@ -1,11 +1,57 @@
 package com.og.Controllers;
 
+import com.og.FXMLHelper;
+import com.og.MainClasses.Book;
 import com.og.MainClasses.User;
+import com.og.MainClasses.WorkWIthXML;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+
+import java.util.List;
 
 public class StoreKeeperScreenController {
 
     public Label fullNameLabel;
+
+    List<Book> books1;
+    List<Book> books2;
+    @FXML
+    private TableView<Book> inStockTable;
+    @FXML
+    private TableColumn<Book, String> titleStockColumn;
+    @FXML
+    private TableColumn<Book, Integer> amountStockColumn;
+    @FXML
+    private TableView<Book> needItTable;
+
+    @FXML
+    private TableColumn<Book, String> titleNeedColumn;
+
+    @FXML
+    private TableColumn<Book, Integer> amountNeedColumn;
+
+
+    public void showBooksInStock() {
+        books1 = WorkWIthXML.returnBooksInStock();
+
+        titleStockColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("title"));
+        amountStockColumn.setCellValueFactory(new PropertyValueFactory<Book, Integer>("amount"));
+
+        inStockTable.getItems().setAll(books1);
+    }
+
+    public void showNeedItList() {
+        books2 = WorkWIthXML.returnBooksInNeedIt();
+
+        titleNeedColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("title"));
+        amountNeedColumn.setCellValueFactory(new PropertyValueFactory<Book, Integer>("amount"));
+
+        needItTable.getItems().setAll(books2);
+    }
 
     public void userInfo() {
         if (User.activeUser != null) {
@@ -14,5 +60,24 @@ public class StoreKeeperScreenController {
     }
 
 
+    public void onButtonSendToShopClick(ActionEvent actionEvent) {
+        int selectedIndex = inStockTable.getSelectionModel().getSelectedIndex();
+        if (selectedIndex == -1) {
+            return;
+        }
+
+        Book selectedBook = books1.get(selectedIndex);
+        WorkWIthXML.addInDelivery(selectedBook.getTitle(), selectedBook.getAuthor(), selectedBook.getGenre());
+    }
+
+    public void onButtonLogOutCLick(ActionEvent actionEvent) {
+        User.activeUser = null;
+        FXMLHelper.loadScreen("StartScreen");
+    }
+
+
+    public void onButtonAcceptNewBooksClick(ActionEvent actionEvent) {
+        FXMLHelper.loadScreen("AddInStockScreen");
+    }
 }
 

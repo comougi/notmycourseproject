@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.AnchorPane?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="600.0"
-            xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="com.og.Controllers.StoreKeeperScreenController">
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.og.Controllers.StoreKeeperScreenController">
     <children>
-        <Label fx:id="fullNameLabel" layoutX="32.0" layoutY="21.0" text="Label"/>
+        <Label fx:id="fullNameLabel" layoutX="32.0" layoutY="21.0" text="Label" />
         <TableView fx:id="inStockTable" layoutX="77.0" layoutY="83.0" prefHeight="200.0" prefWidth="165.0">
             <columns>
-                <TableColumn fx:id="titleStockColumn" prefWidth="75.0" text="Title"/>
-                <TableColumn fx:id="amountStockColumn" prefWidth="75.0" text="Amount"/>
+                <TableColumn fx:id="titleStockColumn" prefWidth="75.0" text="Title" />
+                <TableColumn fx:id="amountStockColumn" prefWidth="75.0" text="Amount" />
             </columns>
         </TableView>
-        <Button layoutX="103.0" layoutY="326.0" mnemonicParsing="false" text="Accept new books"/>
-        <Button layoutX="116.0" layoutY="289.0" mnemonicParsing="false" text="Send to shop"/>
+        <Button onAction="#onButtonAcceptNewBooksClick" layoutX="103.0" layoutY="326.0" mnemonicParsing="false" text="Accept new books" />
+        <Button layoutX="116.0" layoutY="289.0" mnemonicParsing="false" onAction="#onButtonSendToShopClick" text="Send to shop" />
         <TableView fx:id="needItTable" layoutX="348.0" layoutY="83.0" prefHeight="200.0" prefWidth="152.0">
             <columns>
-                <TableColumn fx:id="titleNeedColumn" prefWidth="75.0" text="Title"/>
-                <TableColumn fx:id="amountNeedColumn" prefWidth="75.0" text="Amount"/>
+                <TableColumn fx:id="titleNeedColumn" prefWidth="75.0" text="Title" />
+                <TableColumn fx:id="amountNeedColumn" prefWidth="75.0" text="Amount" />
             </columns>
         </TableView>
+      <Button onAction="#onButtonLogOutCLick" layoutX="500.0" layoutY="352.0" mnemonicParsing="false" text="Log out" />
     </children>
 </AnchorPane>

@@ -2,6 +2,7 @@ package com.og.MainClasses;
 
 import com.og.Controllers.AdminScreenController;
 import com.og.Controllers.SellerScreenController;
+import com.og.Controllers.StoreKeeperScreenController;
 import com.og.FXMLHelper;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -92,6 +93,51 @@ public class WorkWIthXML {
         return bookInShopList;
     }
 
+    public static List<Book> returnBooksInStock() {
+        File xmlFile = new File("src/com/og/XMLs/Stock");
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder;
+        List<Book> bookList = new ArrayList<Book>();
+        try {
+            builder = factory.newDocumentBuilder();
+            Document document = builder.parse(xmlFile);
+            document.getDocumentElement().normalize();
+            NodeList nodeList = document.getElementsByTagName("book");
+
+
+            for (int i = 0; i < nodeList.getLength(); i++) {
+                bookList.add(getBook(nodeList.item(i)));
+            }
+
+        } catch (Exception exc) {
+            exc.printStackTrace();
+        }
+        return bookList;
+    }
+
+    public static List<Book> returnBooksInNeedIt() {
+        File xmlFile = new File("src/com/og/XMLs/NeedIt");
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder;
+        List<Book> bookList1 = new ArrayList<Book>();
+        try {
+            builder = factory.newDocumentBuilder();
+            Document document = builder.parse(xmlFile);
+            document.getDocumentElement().normalize();
+            NodeList nodeList = document.getElementsByTagName("need");
+
+
+            for (int i = 0; i < nodeList.getLength(); i++) {
+                bookList1.add(getBook(nodeList.item(i)));
+            }
+
+        } catch (Exception exc) {
+            exc.printStackTrace();
+        }
+        return bookList1;
+    }
+
+
     public static void addBook(String title, String author, String genre) {
 
         File xmlFile = new File("src/com/og/XMLs/Books");
@@ -157,7 +203,7 @@ public class WorkWIthXML {
             int index = 0;
             for (int i = 0; i < books.size(); i++) {
                 if (books.get(i).getTitle().equals(title)) {
-                index=i;
+                    index = i;
                 }
             }
 
@@ -187,6 +233,134 @@ public class WorkWIthXML {
         int a = Integer.parseInt(book1.getNodeValue()) - 1;
         book1.setNodeValue(Integer.toString(a));
 
+    }
+
+    public static void addSale(String title, int amount) {
+
+        File xmlFile = new File("src/com/og/XMLs/SaleInfo.xml");
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder;
+        try {
+            builder = factory.newDocumentBuilder();
+            Document document = builder.parse(xmlFile);
+            document.getDocumentElement().normalize();
+            Element nList = document.getDocumentElement();
+
+            Element newSale = document.createElement("book");
+
+            Element newTitle = document.createElement("title");
+            newTitle.appendChild(document.createTextNode(title));
+            newSale.appendChild(newTitle);
+
+
+            Element newLeft = document.createElement("left");
+            newLeft.appendChild(document.createTextNode(Integer.toString(amount - 1)));
+            newSale.appendChild(newLeft);
+
+
+            nList.appendChild(newSale);
+
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+
+            StreamResult result = new StreamResult(new File("src/com/og/XMLs/SaleInfo.xml"));
+            DOMSource source = new DOMSource(document);
+            transformer.transform(source, result);
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
+    }
+
+    public static void addInNeedIt(String title,String author, String genre) {
+        File xmlFile = new File("src/com/og/XMLs/NeedIt");
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder;
+        try {
+            builder = factory.newDocumentBuilder();
+            Document document = builder.parse(xmlFile);
+            document.getDocumentElement().normalize();
+            Element nList = document.getDocumentElement();
+
+            Element newNeed = document.createElement("need");
+
+            Element newTitle = document.createElement("title");
+            newTitle.appendChild(document.createTextNode(title));
+            newNeed.appendChild(newTitle);
+
+            Element newAuthor = document.createElement("author");
+            newAuthor.appendChild(document.createTextNode(author));
+            newNeed.appendChild(newAuthor);
+
+            Element newGenre = document.createElement("genre");
+            newGenre.appendChild(document.createTextNode(genre));
+            newNeed.appendChild(newGenre);
+
+            Element newInShop = document.createElement("inShop");
+            newInShop.appendChild(document.createTextNode(Boolean.toString(false)));
+            newNeed.appendChild(newInShop);
+
+            Element newAmount = document.createElement("amount");
+            newAmount.appendChild(document.createTextNode(Integer.toString(5)));
+            newNeed.appendChild(newAmount);
+
+
+            nList.appendChild(newNeed);
+
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+
+            StreamResult result = new StreamResult(new File("src/com/og/XMLs/NeedIt"));
+            DOMSource source = new DOMSource(document);
+            transformer.transform(source, result);
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
+    }
+
+    public static void addInDelivery(String title, String author,String genre) {
+        File xmlFile = new File("src/com/og/XMLs/Delivery");
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder;
+        try {
+            builder = factory.newDocumentBuilder();
+            Document document = builder.parse(xmlFile);
+            document.getDocumentElement().normalize();
+            Element nList = document.getDocumentElement();
+
+            Element newDelivery = document.createElement("book");
+
+            Element newTitle = document.createElement("title");
+            newTitle.appendChild(document.createTextNode(title));
+            newDelivery.appendChild(newTitle);
+
+            Element newAuthor = document.createElement("author");
+            newAuthor.appendChild(document.createTextNode(author));
+            newDelivery.appendChild(newAuthor);
+
+            Element newGenre = document.createElement("genre");
+            newGenre.appendChild(document.createTextNode(genre));
+            newDelivery.appendChild(newGenre);
+
+            Element newInShop = document.createElement("inShop");
+            newInShop.appendChild(document.createTextNode(Boolean.toString(false)));
+            newDelivery.appendChild(newInShop);
+
+            Element newAmount = document.createElement("amount");
+            newAmount.appendChild(document.createTextNode(Integer.toString(5)));
+            newDelivery.appendChild(newAmount);
+
+
+            nList.appendChild(newDelivery);
+
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+
+            StreamResult result = new StreamResult(new File("src/com/og/XMLs/Delivery"));
+            DOMSource source = new DOMSource(document);
+            transformer.transform(source, result);
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
     }
 
     public List<User> returnUsers() {
@@ -224,7 +398,10 @@ public class WorkWIthXML {
                     sellerScreenController.userInfo();
                     sellerScreenController.showAllBooksInShop();
                 } else if (userList.get(i).getPosition().equals("store keeper")) {
-                    FXMLHelper.loadScreen("StoreKeeperScreen");
+                    StoreKeeperScreenController storeKeeperScreenController = FXMLHelper.loadScreenReturnController("StoreKeeperScreen");
+                    storeKeeperScreenController.showBooksInStock();
+                    storeKeeperScreenController.showNeedItList();
+                    storeKeeperScreenController.userInfo();
                 }
             }
         }
@@ -270,77 +447,6 @@ public class WorkWIthXML {
 
 
             FXMLHelper.loadScreen("StartScreen");
-        } catch (Exception exception) {
-            exception.printStackTrace();
-        }
-    }
-
-    public static void addSale(String title,int amount) {
-
-        File xmlFile = new File("src/com/og/XMLs/SaleInfo.xml");
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder;
-        try {
-            builder = factory.newDocumentBuilder();
-            Document document = builder.parse(xmlFile);
-            document.getDocumentElement().normalize();
-            Element nList = document.getDocumentElement();
-
-            Element newSale = document.createElement("book");
-
-            Element newTitle = document.createElement("title");
-            newTitle.appendChild(document.createTextNode(title));
-            newSale.appendChild(newTitle);
-
-
-            Element newLeft = document.createElement("left");
-            newLeft.appendChild(document.createTextNode(Integer.toString(amount-1)));
-            newSale.appendChild(newLeft);
-
-
-            nList.appendChild(newSale);
-
-            Transformer transformer = TransformerFactory.newInstance().newTransformer();
-            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-
-            StreamResult result = new StreamResult(new File("src/com/og/XMLs/SaleInfo.xml"));
-            DOMSource source = new DOMSource(document);
-            transformer.transform(source, result);
-        } catch (Exception exception) {
-            exception.printStackTrace();
-        }
-    }
-
-    public static void addInNeedIt(String title){
-        File xmlFile = new File("src/com/og/XMLs/NeedIt");
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder;
-        try {
-            builder = factory.newDocumentBuilder();
-            Document document = builder.parse(xmlFile);
-            document.getDocumentElement().normalize();
-            Element nList = document.getDocumentElement();
-
-            Element newNeed = document.createElement("need");
-
-            Element newTitle = document.createElement("title");
-            newTitle.appendChild(document.createTextNode(title));
-            newNeed.appendChild(newTitle);
-
-
-            Element newAmount = document.createElement("amount");
-            newAmount.appendChild(document.createTextNode(Integer.toString(5)));
-            newNeed.appendChild(newAmount);
-
-
-            nList.appendChild(newNeed);
-
-            Transformer transformer = TransformerFactory.newInstance().newTransformer();
-            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-
-            StreamResult result = new StreamResult(new File("src/com/og/XMLs/NeedIt"));
-            DOMSource source = new DOMSource(document);
-            transformer.transform(source, result);
         } catch (Exception exception) {
             exception.printStackTrace();
         }
