@@ -25,7 +25,7 @@ public class XMLUpdate {
             builder = factory.newDocumentBuilder();
             Document doc = builder.parse(xmlFile);
             doc.getDocumentElement().normalize();
-            List<Book> books = XMLReturn.returnBooks();
+            List<Book> books = XMLReturn.returnBooksIn("Books", "book");
             int index = 0;
             for (int i = 0; i < books.size(); i++) {
                 if (books.get(i).getTitle().equals(title)) {

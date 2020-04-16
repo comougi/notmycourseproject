@@ -37,7 +37,7 @@ public class StoreKeeperScreenController {
 
 
     public void showBooksInStock() {
-        books1 = XMLReturn.returnBooksInStock();
+        books1 = XMLReturn.returnBooksIn("Stock","book");
 
         titleStockColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("title"));
         amountStockColumn.setCellValueFactory(new PropertyValueFactory<Book, Integer>("amount"));
@@ -46,7 +46,7 @@ public class StoreKeeperScreenController {
     }
 
     public void showNeedItList() {
-        books2 = XMLReturn.returnBooksInNeedIt();
+        books2 = XMLReturn.returnBooksIn("NeedIt","need");
 
         titleNeedColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("title"));
         amountNeedColumn.setCellValueFactory(new PropertyValueFactory<Book, Integer>("amount"));

@@ -18,30 +18,9 @@ import static com.og.MainClasses.XMLGet.getUser;
 
 public class XMLReturn {
 
-    public static List<Book> returnBooks() {
-        File xmlFile = new File("src/com/og/XMLs/Books");
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder;
-        List<Book> bookList = new ArrayList<Book>();
-        try {
-            builder = factory.newDocumentBuilder();
-            Document document = builder.parse(xmlFile);
-            document.getDocumentElement().normalize();
-            NodeList nodeList = document.getElementsByTagName("book");
-
-
-            for (int i = 0; i < nodeList.getLength(); i++) {
-                bookList.add(getBook(nodeList.item(i)));
-            }
-
-        } catch (Exception exc) {
-            exc.printStackTrace();
-        }
-        return bookList;
-    }
 
     public static List<Book> returnBooksInShop() {
-        List<Book> bookList = returnBooks();
+        List<Book> bookList = returnBooksIn("Books", "book");
         List<Book> bookInShopList = new ArrayList<Book>();
         try {
             for (int i = 0; i < bookList.size(); i++) {
@@ -55,8 +34,8 @@ public class XMLReturn {
         return bookInShopList;
     }
 
-    public static List<Book> returnBooksInStock() {
-        File xmlFile = new File("src/com/og/XMLs/Stock");
+    public static List<Book> returnBooksIn(String file, String tag) {
+        File xmlFile = new File(String.format("src/com/og/XMLs/%s", file));
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder;
         List<Book> bookList = new ArrayList<Book>();
@@ -64,7 +43,7 @@ public class XMLReturn {
             builder = factory.newDocumentBuilder();
             Document document = builder.parse(xmlFile);
             document.getDocumentElement().normalize();
-            NodeList nodeList = document.getElementsByTagName("book");
+            NodeList nodeList = document.getElementsByTagName(tag);
 
 
             for (int i = 0; i < nodeList.getLength(); i++) {
@@ -77,49 +56,6 @@ public class XMLReturn {
         return bookList;
     }
 
-    public static List<Book> returnBooksInNeedIt() {
-        File xmlFile = new File("src/com/og/XMLs/NeedIt");
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder;
-        List<Book> bookList1 = new ArrayList<Book>();
-        try {
-            builder = factory.newDocumentBuilder();
-            Document document = builder.parse(xmlFile);
-            document.getDocumentElement().normalize();
-            NodeList nodeList = document.getElementsByTagName("need");
-
-
-            for (int i = 0; i < nodeList.getLength(); i++) {
-                bookList1.add(getBook(nodeList.item(i)));
-            }
-
-        } catch (Exception exc) {
-            exc.printStackTrace();
-        }
-        return bookList1;
-    }
-
-    public static List<Book> returnBooksInDelivery() {
-        File xmlFile = new File("src/com/og/XMLs/Delivery");
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder;
-        List<Book> bookList1 = new ArrayList<Book>();
-        try {
-            builder = factory.newDocumentBuilder();
-            Document document = builder.parse(xmlFile);
-            document.getDocumentElement().normalize();
-            NodeList nodeList = document.getElementsByTagName("book");
-
-
-            for (int i = 0; i < nodeList.getLength(); i++) {
-                bookList1.add(getBook(nodeList.item(i)));
-            }
-
-        } catch (Exception exc) {
-            exc.printStackTrace();
-        }
-        return bookList1;
-    }
 
     public static List<User> returnUsers() {
         File xmlFile = new File("src/com/og/XMLs/Users.xml");
@@ -131,9 +67,12 @@ public class XMLReturn {
             Document document = builder.parse(xmlFile);
             document.getDocumentElement().normalize();
             NodeList nodeList = document.getElementsByTagName("user");
+
+
             for (int i = 0; i < nodeList.getLength(); i++) {
                 userList.add(getUser(nodeList.item(i)));
             }
+
         } catch (Exception exc) {
             exc.printStackTrace();
         }

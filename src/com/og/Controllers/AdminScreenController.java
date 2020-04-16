@@ -32,7 +32,7 @@ public class AdminScreenController {
     private TableColumn<Book, String> genreColumn;
 
     public void showAllBooks() {
-        books = XMLReturn.returnBooks();
+        books = XMLReturn.returnBooksIn("Books","book");
 
         titleColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("title"));
         authorColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("author"));

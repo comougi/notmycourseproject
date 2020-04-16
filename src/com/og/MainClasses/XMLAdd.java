@@ -15,8 +15,6 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.util.List;
 
-import static com.og.MainClasses.XMLReturn.returnBooksInDelivery;
-
 public class XMLAdd {
     public static void addBook(String title, String author, String genre) {
 
@@ -106,8 +104,8 @@ public class XMLAdd {
         }
     }
 
-    public static void addIn(String title, String author, String genre,int amount,String file,String tag) {
-        File xmlFile = new File(String.format("src/com/og/XMLs/%s",file));
+    public static void addIn(String title, String author, String genre, int amount, String file, String tag) {
+        File xmlFile = new File(String.format("src/com/og/XMLs/%s", file));
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder;
         try {
@@ -144,7 +142,7 @@ public class XMLAdd {
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 
-            StreamResult result = new StreamResult(new File(String.format("src/com/og/XMLs/%s",file)));
+            StreamResult result = new StreamResult(new File(String.format("src/com/og/XMLs/%s", file)));
             DOMSource source = new DOMSource(document);
             transformer.transform(source, result);
         } catch (Exception exception) {
@@ -153,10 +151,8 @@ public class XMLAdd {
     }
 
 
-
-
     public static void addFromStockToShop() {
-        List<Book> deliveryBooks = returnBooksInDelivery();
+        List<Book> deliveryBooks = XMLReturn.returnBooksIn("Delivery", "book");
         for (int i = 0; i < deliveryBooks.size(); i++) {
             addBook(deliveryBooks.get(i).getTitle(), deliveryBooks.get(i).getAuthor(), deliveryBooks.get(i).getGenre());
         }

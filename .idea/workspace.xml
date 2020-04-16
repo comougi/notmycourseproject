@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82ed9098-a70a-4502-889a-e3edd88d3a36" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/AddInStockScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/AddInStockScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/SellerScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/SellerScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/AdminScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/AdminScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/StoreKeeperScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/StoreKeeperScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/og/MainClasses/XMLAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/MainClasses/XMLAdd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/og/MainClasses/XMLReturn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/MainClasses/XMLReturn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/og/MainClasses/XMLUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/MainClasses/XMLUpdate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587074116243</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="update and modify XMLAdd class">
+      <created>1587074978826</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1587074978826</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -225,7 +232,8 @@
     <MESSAGE value="update AddInStockScreen" />
     <MESSAGE value="reorganizate WorkWIthXML.java file in 4 new classes XMLAdd+Return+Update+Get&#10;&#10;update SekkerScreenController" />
     <MESSAGE value="reorganizate WorkWIthXML.java file in 4 new classes XMLAdd+Return+Update+Get&#10;&#10;update SellerScreenController" />
-    <option name="LAST_COMMIT_MESSAGE" value="reorganizate WorkWIthXML.java file in 4 new classes XMLAdd+Return+Update+Get&#10;&#10;update SellerScreenController" />
+    <MESSAGE value="update and modify XMLAdd class" />
+    <option name="LAST_COMMIT_MESSAGE" value="update and modify XMLAdd class" />
   </component>
   <component name="WindowStateProjectService">
     <state x="536" y="219" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587071665916">
@@ -244,10 +252,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1587073765531" />
-    <state x="472" y="0" key="CommitChangelistDialog2" timestamp="1587074115220">
+    <state x="472" y="0" key="CommitChangelistDialog2" timestamp="1587074977847">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="472" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1587074115220" />
+    <state x="472" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1587074977847" />
     <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1587060227059">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -276,9 +284,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="349" y="160" key="IDE.errors.dialog/0.0.1536.834@0.0.1536.834" timestamp="1587046489149" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1587074117203">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1587074981224">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1587074117203" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1587074981224" />
   </component>
 </project>
