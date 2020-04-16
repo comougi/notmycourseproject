@@ -54,4 +54,16 @@ public class SellerScreenController {
             fullNameLabel.setText(String.format("Position: %s\nFull name: %s", User.activeUser.getPosition(), User.activeUser.getFullName()));
         }
     }
+
+    public void onButtonSellClick(ActionEvent actionEvent) {
+        int selectedIndex = booksInShopTable.getSelectionModel().getSelectedIndex();
+        if (selectedIndex == -1) {
+            return;
+        }
+
+        Book selectedBook = books.get(selectedIndex);
+        selectedBook.setAmount(selectedBook.getAmount() - 1);
+        WorkWIthXML.updater(selectedBook.getTitle());
+        booksInShopTable.getItems().setAll(books);
+    }
 }

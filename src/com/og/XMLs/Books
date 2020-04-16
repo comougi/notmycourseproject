@@ -4,7 +4,7 @@
         <title>My life</title>
         <author>Richards</author>
         <genre>bio</genre>
-        <amount>4</amount>
+        <amount>5</amount>
         <inShop>false</inShop>
     </book>
 
@@ -12,7 +12,7 @@
         <title>President</title>
         <author>Solovyev</author>
         <genre>bio</genre>
-        <amount>4</amount>
+        <amount>5</amount>
         <inShop>true</inShop>
     </book>
 </books>
