@@ -274,4 +274,75 @@ public class WorkWIthXML {
             exception.printStackTrace();
         }
     }
+
+    public static void addSale(String title,int amount) {
+
+        File xmlFile = new File("src/com/og/XMLs/SaleInfo.xml");
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder;
+        try {
+            builder = factory.newDocumentBuilder();
+            Document document = builder.parse(xmlFile);
+            document.getDocumentElement().normalize();
+            Element nList = document.getDocumentElement();
+
+            Element newSale = document.createElement("book");
+
+            Element newTitle = document.createElement("title");
+            newTitle.appendChild(document.createTextNode(title));
+            newSale.appendChild(newTitle);
+
+
+            Element newLeft = document.createElement("left");
+            newLeft.appendChild(document.createTextNode(Integer.toString(amount-1)));
+            newSale.appendChild(newLeft);
+
+
+            nList.appendChild(newSale);
+
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+
+            StreamResult result = new StreamResult(new File("src/com/og/XMLs/SaleInfo.xml"));
+            DOMSource source = new DOMSource(document);
+            transformer.transform(source, result);
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
+    }
+
+    public static void addInNeedIt(String title){
+        File xmlFile = new File("src/com/og/XMLs/NeedIt");
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder;
+        try {
+            builder = factory.newDocumentBuilder();
+            Document document = builder.parse(xmlFile);
+            document.getDocumentElement().normalize();
+            Element nList = document.getDocumentElement();
+
+            Element newNeed = document.createElement("need");
+
+            Element newTitle = document.createElement("title");
+            newTitle.appendChild(document.createTextNode(title));
+            newNeed.appendChild(newTitle);
+
+
+            Element newAmount = document.createElement("amount");
+            newAmount.appendChild(document.createTextNode(Integer.toString(5)));
+            newNeed.appendChild(newAmount);
+
+
+            nList.appendChild(newNeed);
+
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+
+            StreamResult result = new StreamResult(new File("src/com/og/XMLs/NeedIt"));
+            DOMSource source = new DOMSource(document);
+            transformer.transform(source, result);
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
+    }
 }

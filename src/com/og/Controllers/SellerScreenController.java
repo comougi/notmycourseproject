@@ -65,5 +65,17 @@ public class SellerScreenController {
         selectedBook.setAmount(selectedBook.getAmount() - 1);
         WorkWIthXML.updater(selectedBook.getTitle());
         booksInShopTable.getItems().setAll(books);
+        WorkWIthXML.addSale(selectedBook.getTitle(), selectedBook.getAmount());
+    }
+
+    public void onButtonNeedItClick(ActionEvent actionEvent) {
+        int selectedIndex = booksInShopTable.getSelectionModel().getSelectedIndex();
+        if (selectedIndex == -1) {
+            return;
+        }
+
+        Book selectedBook = books.get(selectedIndex);
+        WorkWIthXML.addInNeedIt(selectedBook.getTitle());
+        booksInShopTable.getItems().setAll(books);
     }
 }

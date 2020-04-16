@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82ed9098-a70a-4502-889a-e3edd88d3a36" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/og/XMLs/SaleInfo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/og/XMLs/Stock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/courseproject/com/og/MainClasses/WorkWIthXML.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/courseproject/com/og/MainClasses/WorkWIthXML.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/courseproject/com/og/XMLs/Users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/courseproject/com/og/XMLs/Users.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/SellerScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/SellerScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/og/MainClasses/WorkWIthXML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/MainClasses/WorkWIthXML.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/og/UI/SellerScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/UI/SellerScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/og/UI/StoreKeeperScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/UI/StoreKeeperScreen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/og/XMLs/Books" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/XMLs/Books" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/og/XMLs/NeedIt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/XMLs/NeedIt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -38,7 +41,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Transportation3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -170,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587060138006</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update SellerScreenController and Sell button">
+      <created>1587062262029</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1587062262029</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -186,21 +196,22 @@
     <MESSAGE value="add greeting method in AdminScreen" />
     <MESSAGE value="update AdminScreen.fxml&#10;add NeedIt file&#10;start to work with SellerScreen.fxml" />
     <MESSAGE value="add table with all books in shop" />
-    <option name="LAST_COMMIT_MESSAGE" value="add table with all books in shop" />
+    <MESSAGE value="update SellerScreenController and Sell button" />
+    <option name="LAST_COMMIT_MESSAGE" value="update SellerScreenController and Sell button" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="536" y="219" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587059130308">
+    <state x="536" y="219" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587069602097">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="536" y="219" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1587059130308" />
+    <state x="536" y="219" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1587069602097" />
     <state x="574" y="124" key="#com.intellij.ide.util.MemberChooser" timestamp="1587058073427">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="574" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1587058073427" />
-    <state x="421" y="0" key="CommitChangelistDialog2" timestamp="1587060136977">
+    <state x="472" y="0" key="CommitChangelistDialog2" timestamp="1587062261080">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="421" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1587060136977" />
+    <state x="472" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1587062261080" />
     <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1587060227059">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -209,29 +220,29 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="629" y="329" key="Github.Dialog.Accounts.Choose/0.0.1536.834@0.0.1536.834" timestamp="1587038749436" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1587061449542">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1587069755877">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1587061449542" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1587061449542">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1587069755877" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1587069755876">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1587061449542" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1587061449541">
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1587069755876" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1587069755876">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1587061449541" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1587061449542">
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1587069755876" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1587069755876">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1587061449542" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1587069755876" />
     <state x="349" y="160" key="IDE.errors.dialog" timestamp="1587046489149">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="349" y="160" key="IDE.errors.dialog/0.0.1536.834@0.0.1536.834" timestamp="1587046489149" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1587060140996">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1587062266108">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1587060140996" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1587062266108" />
   </component>
 </project>

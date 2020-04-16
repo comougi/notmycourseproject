@@ -12,7 +12,7 @@
         <title>President</title>
         <author>Solovyev</author>
         <genre>bio</genre>
-        <amount>5</amount>
+        <amount>4</amount>
         <inShop>true</inShop>
     </book>
 </books>
