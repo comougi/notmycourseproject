@@ -1,7 +1,10 @@
 package com.og.Controllers;
 
 import com.og.FXMLHelper;
-import com.og.MainClasses.*;
+import com.og.MainClasses.Book;
+import com.og.MainClasses.User;
+import com.og.MainClasses.XMLAdd;
+import com.og.MainClasses.XMLReturn;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -63,9 +66,11 @@ public class StoreKeeperScreenController {
         if (selectedIndex == -1) {
             return;
         }
-
         Book selectedBook = books1.get(selectedIndex);
-        XMLAdd.addInDelivery(selectedBook.getTitle(), selectedBook.getAuthor(), selectedBook.getGenre());
+        XMLAdd.addIn(selectedBook.getTitle(), selectedBook.getAuthor(), selectedBook.getGenre(), 5, "Delivery", "book");
+        AdminScreenController adminScreenController = FXMLHelper.loadScreenReturnController("AdminScreen");
+        adminScreenController.showAllBooks();
+        adminScreenController.userInfo();
     }
 
     public void onButtonLogOutCLick(ActionEvent actionEvent) {

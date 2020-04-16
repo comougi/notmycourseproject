@@ -73,7 +73,7 @@ public class SellerScreenController {
         }
 
         Book selectedBook = books.get(selectedIndex);
-        XMLAdd.addInNeedIt(selectedBook.getTitle(), selectedBook.getAuthor(), selectedBook.getGenre());
+        XMLAdd.addIn(selectedBook.getTitle(), selectedBook.getAuthor(), selectedBook.getGenre(),5,"NeedIt","need");
         booksInShopTable.getItems().setAll(books);
     }
 

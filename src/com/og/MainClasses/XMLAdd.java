@@ -44,7 +44,7 @@ public class XMLAdd {
             newBook.appendChild(newGenre);
 
             Element newAmount = document.createElement("amount");
-            newAmount.appendChild(document.createTextNode(""));
+            newAmount.appendChild(document.createTextNode(Integer.toString(1)));
             newBook.appendChild(newAmount);
 
             Element newInShop = document.createElement("inShop");
@@ -69,6 +69,7 @@ public class XMLAdd {
             exception.printStackTrace();
         }
     }
+
     public static void addSale(String title, int amount) {
 
         File xmlFile = new File("src/com/og/XMLs/SaleInfo.xml");
@@ -105,8 +106,8 @@ public class XMLAdd {
         }
     }
 
-    public static void addInNeedIt(String title, String author, String genre) {
-        File xmlFile = new File("src/com/og/XMLs/NeedIt");
+    public static void addIn(String title, String author, String genre,int amount,String file,String tag) {
+        File xmlFile = new File(String.format("src/com/og/XMLs/%s",file));
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder;
         try {
@@ -115,7 +116,7 @@ public class XMLAdd {
             document.getDocumentElement().normalize();
             Element nList = document.getDocumentElement();
 
-            Element newNeed = document.createElement("need");
+            Element newNeed = document.createElement(tag);
 
             Element newTitle = document.createElement("title");
             newTitle.appendChild(document.createTextNode(title));
@@ -134,7 +135,7 @@ public class XMLAdd {
             newNeed.appendChild(newInShop);
 
             Element newAmount = document.createElement("amount");
-            newAmount.appendChild(document.createTextNode(Integer.toString(5)));
+            newAmount.appendChild(document.createTextNode(Integer.toString(amount)));
             newNeed.appendChild(newAmount);
 
 
@@ -143,7 +144,7 @@ public class XMLAdd {
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 
-            StreamResult result = new StreamResult(new File("src/com/og/XMLs/NeedIt"));
+            StreamResult result = new StreamResult(new File(String.format("src/com/og/XMLs/%s",file)));
             DOMSource source = new DOMSource(document);
             transformer.transform(source, result);
         } catch (Exception exception) {
@@ -151,103 +152,8 @@ public class XMLAdd {
         }
     }
 
-    public static void addInDelivery(String title, String author, String genre) {
-        File xmlFile = new File("src/com/og/XMLs/Delivery");
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder;
-        try {
-            builder = factory.newDocumentBuilder();
-            Document document = builder.parse(xmlFile);
-            document.getDocumentElement().normalize();
-            Element nList = document.getDocumentElement();
-
-            Element newDelivery = document.createElement("book");
-
-            Element newTitle = document.createElement("title");
-            newTitle.appendChild(document.createTextNode(title));
-            newDelivery.appendChild(newTitle);
-
-            Element newAuthor = document.createElement("author");
-            newAuthor.appendChild(document.createTextNode(author));
-            newDelivery.appendChild(newAuthor);
-
-            Element newGenre = document.createElement("genre");
-            newGenre.appendChild(document.createTextNode(genre));
-            newDelivery.appendChild(newGenre);
-
-            Element newInShop = document.createElement("inShop");
-            newInShop.appendChild(document.createTextNode(Boolean.toString(false)));
-            newDelivery.appendChild(newInShop);
-
-            Element newAmount = document.createElement("amount");
-            newAmount.appendChild(document.createTextNode(Integer.toString(5)));
-            newDelivery.appendChild(newAmount);
 
 
-            nList.appendChild(newDelivery);
-
-            Transformer transformer = TransformerFactory.newInstance().newTransformer();
-            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-
-            StreamResult result = new StreamResult(new File("src/com/og/XMLs/Delivery"));
-            DOMSource source = new DOMSource(document);
-            transformer.transform(source, result);
-        } catch (Exception exception) {
-            exception.printStackTrace();
-        }
-    }
-
-    public static void addBookInStock(String title, String author, String genre, int amount) {
-
-        File xmlFile = new File("src/com/og/XMLs/Stock");
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder;
-        try {
-            builder = factory.newDocumentBuilder();
-            Document document = builder.parse(xmlFile);
-            document.getDocumentElement().normalize();
-            Element nList = document.getDocumentElement();
-
-            Element newBook = document.createElement("book");
-
-            Element newTitle = document.createElement("title");
-            newTitle.appendChild(document.createTextNode(title));
-            newBook.appendChild(newTitle);
-
-            Element newAuthor = document.createElement("author");
-            newAuthor.appendChild(document.createTextNode(author));
-            newBook.appendChild(newAuthor);
-
-            Element newGenre = document.createElement("genre");
-            newGenre.appendChild(document.createTextNode(genre));
-            newBook.appendChild(newGenre);
-
-            Element newAmount = document.createElement("amount");
-            newAmount.appendChild(document.createTextNode(Integer.toString(amount)));
-            newBook.appendChild(newAmount);
-
-            Element newInShop = document.createElement("inShop");
-            newInShop.appendChild(document.createTextNode(Boolean.toString(false)));
-            newBook.appendChild(newInShop);
-
-
-            nList.appendChild(newBook);
-
-            Transformer transformer = TransformerFactory.newInstance().newTransformer();
-            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-
-            StreamResult result = new StreamResult(new File("src/com/og/XMLs/Stock"));
-            DOMSource source = new DOMSource(document);
-            transformer.transform(source, result);
-
-
-            AdminScreenController adminScreenController = FXMLHelper.loadScreenReturnController("AdminScreen");
-            adminScreenController.showAllBooks();
-            adminScreenController.userInfo();
-        } catch (Exception exception) {
-            exception.printStackTrace();
-        }
-    }
 
     public static void addFromStockToShop() {
         List<Book> deliveryBooks = returnBooksInDelivery();

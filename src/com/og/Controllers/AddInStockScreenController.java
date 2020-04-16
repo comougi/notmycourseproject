@@ -16,9 +16,9 @@ public class AddInStockScreenController {
         String title = titleField.getText();
         String author = authorField.getText();
         String genre = genreField.getText();
-        int amount=Integer.parseInt(amountField.getText());
+        int amount = Integer.parseInt(amountField.getText());
 
-        XMLAdd.addBookInStock(title,author,genre,amount);
+        XMLAdd.addIn(title, author, genre, amount, "Stock", "book");
 
     }
 
