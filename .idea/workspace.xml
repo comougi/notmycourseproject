@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82ed9098-a70a-4502-889a-e3edd88d3a36" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/courseproject/com/og/Controllers/RegistrationScreenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/courseproject/com/og/Controllers/RegistrationScreenController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/courseproject/com/og/Controllers/StartScreenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/courseproject/com/og/Controllers/StartScreenController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/courseproject/com/og/MainClasses/WorkWIthXML.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/courseproject/com/og/MainClasses/WorkWIthXML.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/courseproject/com/og/XMLs/Users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/courseproject/com/og/XMLs/Users.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/RegistrationScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/RegistrationScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/StartScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/StartScreenController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +113,21 @@
       <option name="project" value="LOCAL" />
       <updated>1587049742543</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add empty field alerts">
+      <created>1587050065535</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1587050065535</updated>
+    </task>
+    <task id="LOCAL-00006" summary="modify validation method">
+      <created>1587050320252</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1587050320252</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -117,17 +135,19 @@
     <MESSAGE value="update WorkWIthXML.java &amp; Users.xml" />
     <MESSAGE value="add validation method" />
     <MESSAGE value="add registration method" />
-    <option name="LAST_COMMIT_MESSAGE" value="add registration method" />
+    <MESSAGE value="add empty field alerts" />
+    <MESSAGE value="modify validation method" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify validation method" />
   </component>
   <component name="WindowStateProjectService">
     <state x="574" y="124" key="#com.intellij.ide.util.MemberChooser" timestamp="1587037804398">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="574" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1587037804398" />
-    <state x="278" y="0" key="CommitChangelistDialog2" timestamp="1587049741431">
+    <state x="421" y="0" key="CommitChangelistDialog2" timestamp="1587050319457">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="278" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1587049741431" />
+    <state x="421" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1587050319457" />
     <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1587044624623">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -136,29 +156,29 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="629" y="329" key="Github.Dialog.Accounts.Choose/0.0.1536.834@0.0.1536.834" timestamp="1587038749436" />
-    <state width="1493" height="214" key="GridCell.Tab.0.bottom" timestamp="1587046544472">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1587052440363">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="214" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1587046544472" />
-    <state width="1493" height="214" key="GridCell.Tab.0.center" timestamp="1587046544472">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1587052440363" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1587052440363">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="214" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1587046544472" />
-    <state width="1493" height="214" key="GridCell.Tab.0.left" timestamp="1587046544472">
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1587052440363" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1587052440363">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="214" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1587046544472" />
-    <state width="1493" height="214" key="GridCell.Tab.0.right" timestamp="1587046544472">
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1587052440363" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1587052440363">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="214" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1587046544472" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1587052440363" />
     <state x="349" y="160" key="IDE.errors.dialog" timestamp="1587046489149">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="349" y="160" key="IDE.errors.dialog/0.0.1536.834@0.0.1536.834" timestamp="1587046489149" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1587049745100">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1587050324468">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1587049745100" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1587050324468" />
   </component>
 </project>
