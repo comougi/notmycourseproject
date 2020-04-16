@@ -53,8 +53,8 @@ public class RegistrationScreenController extends WorkWIthXML {
                 passwordField.clear();
                 fullNameField.clear();
                 positionField.clear();
-                return;
         }
+
 
 
 
