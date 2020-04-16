@@ -26,4 +26,10 @@
         <fullName>h</fullName>
     </user>
 
+<user>
+<login>maxim</login>
+<password>qqq</password>
+<position>admin</position>
+<fullName>qqq</fullName>
+</user>
 </users>

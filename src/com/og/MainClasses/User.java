@@ -1,8 +1,7 @@
 package com.og.MainClasses;
 
-import static java.lang.String.format;
-
 public class User {
+    public static User activeUser;
     private String login;
     private String password;
     private String position;

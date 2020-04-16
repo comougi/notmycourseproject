@@ -27,6 +27,7 @@ public class StartScreenController extends WorkWIthXML {
         }
 
         validation(login, password);
+
     }
 
 

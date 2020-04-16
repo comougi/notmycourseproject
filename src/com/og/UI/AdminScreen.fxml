@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.og.Controllers.AdminScreenController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.og.Controllers.AdminScreenController">
+   <children>
+      <TableView fx:id="booksTable" layoutX="200.0" layoutY="100.0" prefHeight="200.0" prefWidth="225.0">
+        <columns>
+          <TableColumn fx:id="titleColumn" prefWidth="75.0" text="Title" />
+          <TableColumn fx:id="authorColumn" prefWidth="75.0" text="Author" />
+            <TableColumn fx:id="genreColumn" prefWidth="75.0" text="Genre" />
+        </columns>
+      </TableView>
+      <Label fx:id="fullNameLabel" layoutX="56.0" layoutY="14.0" text="Label" />
+   </children>
 </AnchorPane>

@@ -1,5 +1,6 @@
 package com.og.MainClasses;
 
+import com.og.Controllers.AdminScreenController;
 import com.og.FXMLHelper;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -32,10 +33,44 @@ public class WorkWIthXML {
         return user;
     }
 
+    private static Book getBook(Node node) {
+        Book book = new Book();
+        if (node.getNodeType() == Node.ELEMENT_NODE) {
+            Element element = (Element) node;
+            book.setTitle(getTagValue("title", element));
+            book.setAuthor(getTagValue("author", element));
+            book.setGenre(getTagValue("genre", element));
+        }
+
+        return book;
+    }
+
     private static String getTagValue(String tag, Element element) {
         NodeList nodeList = element.getElementsByTagName(tag).item(0).getChildNodes();
         Node node = nodeList.item(0);
         return node.getNodeValue();
+    }
+
+    public static List<Book> returnBookByTag() {
+        File xmlFile = new File("src/com/og/XMLs/Books");
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder;
+        List<Book> bookList = new ArrayList<Book>();
+        try {
+            builder = factory.newDocumentBuilder();
+            Document document = builder.parse(xmlFile);
+            document.getDocumentElement().normalize();
+            NodeList nodeList = document.getElementsByTagName("book");
+
+
+            for (int i = 0; i < nodeList.getLength(); i++) {
+                bookList.add(getBook(nodeList.item(i)));
+            }
+
+        } catch (Exception exc) {
+            exc.printStackTrace();
+        }
+        return bookList;
     }
 
     public void validation(String login, String password) {
@@ -57,7 +92,8 @@ public class WorkWIthXML {
             for (int i = 0; i < userList.size(); i++) {
                 if (u.getLogin().equals(userList.get(i).getLogin()) && u.getPassword().equals(userList.get(i).getPassword())) {
                     if (userList.get(i).getPosition().equals("admin")) {
-                        FXMLHelper.loadScreen("AdminScreen");
+                        AdminScreenController adminScreenController = FXMLHelper.loadScreenReturnController("AdminScreen");
+                        adminScreenController.showAllBooks();
                     } else if (userList.get(i).getPosition().equals("seller")) {
                         FXMLHelper.loadScreen("SellerScreen");
                     } else if (userList.get(i).getPosition().equals("store keeper")) {
@@ -114,6 +150,5 @@ public class WorkWIthXML {
         } catch (Exception exception) {
             exception.printStackTrace();
         }
-
     }
 }
