@@ -1,8 +1,10 @@
 package com.og.Controllers;
 
+import com.og.FXMLHelper;
 import com.og.MainClasses.Book;
 import com.og.MainClasses.User;
 import com.og.MainClasses.WorkWIthXML;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -41,7 +43,16 @@ public class AdminScreenController {
 
     public void userInfo() {
         if (User.activeUser != null) {
-fullNameLabel.setText(String.format("Position: %s\nFull name: %s",User.activeUser.getPosition(),User.activeUser.getFullName()));
+            fullNameLabel.setText(String.format("Position: %s\nFull name: %s", User.activeUser.getPosition(), User.activeUser.getFullName()));
         }
+    }
+
+    public void addNewBookButtonClick(ActionEvent actionEvent) {
+        FXMLHelper.loadScreen("AddBookScreen");
+    }
+
+    public void logOutButton(ActionEvent actionEvent) {
+        User.activeUser = null;
+        FXMLHelper.loadScreen("StartScreen");
     }
 }

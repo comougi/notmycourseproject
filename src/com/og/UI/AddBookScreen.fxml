@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.og.Controllers.AddBookScreenController">
+   <children>
+      <TextField fx:id="titleField" layoutX="226.0" layoutY="116.0" />
+      <TextField fx:id="authorField" layoutX="226.0" layoutY="166.0" />
+      <TextField fx:id="genreField" layoutX="226.0" layoutY="216.0" />
+      <Button onAction="#onAddButtonClick" layoutX="375.0" layoutY="276.0" mnemonicParsing="false" text="Add" />
+      <Button onAction="#onBackButtonClick" layoutX="72.0" layoutY="289.0" mnemonicParsing="false" text="Back" />
+   </children>
+</AnchorPane>

@@ -4,6 +4,8 @@ public class Book {
     private String title;
     private String author;
     private String genre;
+    private int amount;
+    private boolean inShop;
 
     public Book(String title, String author, String genre) {
         this.title = title;
@@ -11,7 +13,31 @@ public class Book {
         this.genre = genre;
     }
 
+    public Book(String title, String author, String genre, int amount, boolean inShop) {
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+        this.amount = amount;
+        this.inShop = inShop;
+    }
+
     public Book() {
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public boolean isInShop() {
+        return inShop;
+    }
+
+    public void setInShop(boolean inShop) {
+        this.inShop = inShop;
     }
 
     public String getTitle() {
@@ -37,4 +63,6 @@ public class Book {
     public void setGenre(String genre) {
         this.genre = genre;
     }
+
+
 }

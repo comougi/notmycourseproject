@@ -40,6 +40,9 @@ public class WorkWIthXML {
             book.setTitle(getTagValue("title", element));
             book.setAuthor(getTagValue("author", element));
             book.setGenre(getTagValue("genre", element));
+            book.setAmount(Integer.parseInt(getTagValue("amount", element)));
+            book.setInShop(Boolean.parseBoolean(getTagValue("inShop", element)));
+
         }
 
         return book;
@@ -71,6 +74,58 @@ public class WorkWIthXML {
             exc.printStackTrace();
         }
         return bookList;
+    }
+
+    public static void addBook(String title, String author, String genre) {
+
+        File xmlFile = new File("src/com/og/XMLs/Books");
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder;
+        try {
+            builder = factory.newDocumentBuilder();
+            Document document = builder.parse(xmlFile);
+            document.getDocumentElement().normalize();
+            Element nList = document.getDocumentElement();
+
+            Element newBook = document.createElement("book");
+
+            Element newTitle = document.createElement("title");
+            newTitle.appendChild(document.createTextNode(title));
+            newBook.appendChild(newTitle);
+
+            Element newAuthor = document.createElement("author");
+            newAuthor.appendChild(document.createTextNode(author));
+            newBook.appendChild(newAuthor);
+
+            Element newGenre = document.createElement("genre");
+            newGenre.appendChild(document.createTextNode(genre));
+            newBook.appendChild(newGenre);
+
+            Element newAmount = document.createElement("amount");
+            newAmount.appendChild(document.createTextNode(""));
+            newBook.appendChild(newAmount);
+
+            Element newInShop = document.createElement("inShop");
+            newInShop.appendChild(document.createTextNode(""));
+            newBook.appendChild(newInShop);
+
+
+            nList.appendChild(newBook);
+
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+
+            StreamResult result = new StreamResult(new File("src/com/og/XMLs/Books"));
+            DOMSource source = new DOMSource(document);
+            transformer.transform(source, result);
+
+
+            AdminScreenController adminScreenController = FXMLHelper.loadScreenReturnController("AdminScreen");
+            adminScreenController.showAllBooks();
+            adminScreenController.userInfo();
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
     }
 
     public List<User> returnUsers() {

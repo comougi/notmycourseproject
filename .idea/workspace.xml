@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82ed9098-a70a-4502-889a-e3edd88d3a36" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/og/Controllers/AddBookScreenController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/og/UI/AddBookScreen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/courseproject/com/og/Controllers/StartScreenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/courseproject/com/og/Controllers/StartScreenController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/courseproject/com/og/MainClasses/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/courseproject/com/og/MainClasses/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/courseproject/com/og/MainClasses/WorkWIthXML.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/courseproject/com/og/MainClasses/WorkWIthXML.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/AdminScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/AdminScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/StartScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/StartScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/SellerScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/SellerScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/og/MainClasses/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/MainClasses/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/og/MainClasses/WorkWIthXML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/MainClasses/WorkWIthXML.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/og/UI/AdminScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/UI/AdminScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/og/UI/SellerScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/UI/SellerScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/og/XMLs/Books" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/XMLs/Books" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587056352290</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add greeting method in AdminScreen">
+      <created>1587057025779</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1587057025779</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -162,21 +173,22 @@
     <MESSAGE value="update registration method" />
     <MESSAGE value="add position screens and controllers" />
     <MESSAGE value="add product table on AdminScreen" />
-    <option name="LAST_COMMIT_MESSAGE" value="add product table on AdminScreen" />
+    <MESSAGE value="add greeting method in AdminScreen" />
+    <option name="LAST_COMMIT_MESSAGE" value="add greeting method in AdminScreen" />
   </component>
   <component name="WindowStateProjectService">
     <state x="536" y="219" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587054151760">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="536" y="219" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1587054151760" />
-    <state x="574" y="124" key="#com.intellij.ide.util.MemberChooser" timestamp="1587055275350">
+    <state x="574" y="124" key="#com.intellij.ide.util.MemberChooser" timestamp="1587058073427">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="574" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1587055275350" />
-    <state x="421" y="0" key="CommitChangelistDialog2" timestamp="1587056351277">
+    <state x="574" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1587058073427" />
+    <state x="421" y="0" key="CommitChangelistDialog2" timestamp="1587057024712">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="421" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1587056351277" />
+    <state x="421" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1587057024712" />
     <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1587054549891">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -185,29 +197,29 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="629" y="329" key="Github.Dialog.Accounts.Choose/0.0.1536.834@0.0.1536.834" timestamp="1587038749436" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1587056175038">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1587058855550">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1587056175038" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1587056175038">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1587058855550" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1587058855550">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1587056175038" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1587056175038">
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1587058855550" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1587058855550">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1587056175038" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1587056175038">
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1587058855550" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1587058855550">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1587056175038" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1587058855550" />
     <state x="349" y="160" key="IDE.errors.dialog" timestamp="1587046489149">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="349" y="160" key="IDE.errors.dialog/0.0.1536.834@0.0.1536.834" timestamp="1587046489149" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1587056354385">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1587057027104">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1587056354385" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1587057027104" />
   </component>
 </project>

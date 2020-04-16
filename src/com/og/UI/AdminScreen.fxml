@@ -13,5 +13,7 @@
         </columns>
       </TableView>
       <Label fx:id="fullNameLabel" layoutX="56.0" layoutY="14.0" text="Label" />
+      <Button onAction="#addNewBookButtonClick" layoutX="400.0" layoutY="322.0" mnemonicParsing="false" text="Add new book" />
+      <Button onAction="#logOutButton" layoutX="400.0" layoutY="361.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="94.0" text="Log out" />
    </children>
 </AnchorPane>
