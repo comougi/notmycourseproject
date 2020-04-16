@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<users>
+    <user>
+        <login>a</login>
+        <password>a</password>
+        <position>a</position>
+        <fullName>a</fullName>
+    </user>
+    <user>
+        <login>b</login>
+        <password>b</password>
+        <position>b</position>
+        <fullName>b</fullName>
+    </user>
+    <user>
+        <login>c</login>
+        <password>c</password>
+        <position>c</position>
+        <fullName>c</fullName>
+    </user>
+
+</users>
