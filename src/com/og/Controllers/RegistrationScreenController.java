@@ -2,6 +2,7 @@ package com.og.Controllers;
 
 import com.og.MainClasses.WorkWIthXML;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
@@ -19,7 +20,19 @@ public class RegistrationScreenController extends WorkWIthXML {
         String fullName = fullNameField.getText();
         String position = positionField.getText();
 
-        addUser(login, password, position, fullName);
+        if (login.trim().length() == 0 || password.trim().length() == 0 || fullName.trim().length() == 0 || position.trim().length() == 0) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("LogIn Failed");
+            alert.setHeaderText("Unable to Log In");
+            alert.setContentText("Login or Password were empty\nPlease Try Again.");
+            alert.showAndWait();
+            loginField.clear();
+            passwordField.clear();
+            fullNameField.clear();
+            positionField.clear();
+            return;
+        }
 
+        addUser(login, password, position, fullName);
     }
 }
