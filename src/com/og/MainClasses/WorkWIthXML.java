@@ -56,7 +56,13 @@ public class WorkWIthXML {
             User u = new User(login, password);
             for (int i = 0; i < userList.size(); i++) {
                 if (u.getLogin().equals(userList.get(i).getLogin()) && u.getPassword().equals(userList.get(i).getPassword())) {
-                    FXMLHelper.loadScreen("RegistrationScreen");
+                    if (userList.get(i).getPosition().equals("admin")) {
+                        FXMLHelper.loadScreen("AdminScreen");
+                    } else if (userList.get(i).getPosition().equals("seller")) {
+                        FXMLHelper.loadScreen("SellerScreen");
+                    } else if (userList.get(i).getPosition().equals("store keeper")) {
+                        FXMLHelper.loadScreen("StoreKeeperScreen");
+                    }
                 }
             }
 

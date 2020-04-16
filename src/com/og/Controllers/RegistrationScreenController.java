@@ -33,6 +33,8 @@ public class RegistrationScreenController extends WorkWIthXML {
             return;
         }
 
+
+
         addUser(login, password, position, fullName);
     }
 }
