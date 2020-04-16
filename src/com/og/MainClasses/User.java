@@ -54,9 +54,4 @@ public class User {
     public void setFullName(String fullName) {
         this.fullName = fullName;
     }
-
-    @Override
-    public String toString() {
-        return String.format("login %s, password %s", login, password);
-    }
 }

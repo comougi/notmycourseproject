@@ -1,5 +1,6 @@
 package com.og.Controllers;
 
+import com.og.FXMLHelper;
 import com.og.MainClasses.WorkWIthXML;
 import javafx.event.ActionEvent;
 import javafx.scene.control.PasswordField;
@@ -17,6 +18,6 @@ public class StartScreenController extends WorkWIthXML {
 
 
     public void onButtonRegistrationClick(ActionEvent actionEvent) {
-
+        FXMLHelper.loadScreen("RegistrationScreen");
     }
 }

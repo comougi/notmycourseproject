@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.og.Controllers.RegistrationScreenController"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.og.Controllers.RegistrationScreenController">
+    <children>
+        <TextField fx:id="loginField" layoutX="226.0" layoutY="100.0" />
+        <PasswordField fx:id="passwordField" layoutX="226.0" layoutY="150.0" />
+        <TextField fx:id="positionField" layoutX="226.0" layoutY="200.0" />
+        <TextField fx:id="fullNameField" layoutX="226.0" layoutY="250.0" />
 
+        <Button onAction="#onButtonRegClick" layoutX="412.0" layoutY="301.0" mnemonicParsing="false" text="Reg" />
+
+    </children>
 </AnchorPane>

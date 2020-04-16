@@ -8,6 +8,11 @@ import org.w3c.dom.NodeList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -57,6 +62,51 @@ public class WorkWIthXML {
 
         } catch (Exception exc) {
             exc.printStackTrace();
+        }
+    }
+
+    public void addUser(String login, String password, String position, String fullName) {
+
+        File xmlFile = new File("src/com/og/XMLs/Users.xml");
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder;
+        try {
+            builder = factory.newDocumentBuilder();
+            Document document = builder.parse(xmlFile);
+            document.getDocumentElement().normalize();
+            Element nList = document.getDocumentElement();
+
+            Element newUser = document.createElement("user");
+
+            Element newLogin = document.createElement("login");
+            newLogin.appendChild(document.createTextNode(login));
+            newUser.appendChild(newLogin);
+
+            Element newPassword = document.createElement("password");
+            newPassword.appendChild(document.createTextNode(password));
+            newUser.appendChild(newPassword);
+
+            Element newPosition = document.createElement("position");
+            newPosition.appendChild(document.createTextNode(position));
+            newUser.appendChild(newPosition);
+
+            Element newFullName = document.createElement("fullName");
+            newFullName.appendChild(document.createTextNode(fullName));
+            newUser.appendChild(newFullName);
+
+            nList.appendChild(newUser);
+
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+
+            StreamResult result = new StreamResult(new File("src/com/og/XMLs/Users.xml"));
+            DOMSource source = new DOMSource(document);
+            transformer.transform(source, result);
+
+
+            FXMLHelper.loadScreen("StartScreen");
+        } catch (Exception exception) {
+            exception.printStackTrace();
         }
 
     }
