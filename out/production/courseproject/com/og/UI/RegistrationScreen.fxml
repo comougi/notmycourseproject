@@ -3,14 +3,19 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.og.Controllers.RegistrationScreenController">
+<AnchorPane prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.og.Controllers.RegistrationScreenController">
     <children>
-        <TextField fx:id="loginField" layoutX="226.0" layoutY="100.0" />
-        <PasswordField fx:id="passwordField" layoutX="226.0" layoutY="150.0" />
-        <TextField fx:id="positionField" layoutX="226.0" layoutY="200.0" />
-        <TextField fx:id="fullNameField" layoutX="226.0" layoutY="250.0" />
+        <TextField fx:id="loginField" layoutX="263.0" layoutY="222.0" />
+        <PasswordField fx:id="passwordField" layoutX="263.0" layoutY="275.0" />
+        <TextField fx:id="positionField" layoutX="263.0" layoutY="337.0" />
+        <TextField fx:id="fullNameField" layoutX="263.0" layoutY="388.0" />
 
-        <Button onAction="#onButtonRegClick" layoutX="412.0" layoutY="301.0" mnemonicParsing="false" text="Reg" />
+        <Button layoutX="427.0" layoutY="445.0" mnemonicParsing="false" onAction="#onButtonRegClick" text="Registration" />
+      <Label layoutX="205.0" layoutY="226.0" text="Login" />
+      <Label layoutX="206.0" layoutY="279.0" text="Password" />
+      <Label layoutX="206.0" layoutY="341.0" text="Position" />
+      <Label layoutX="205.0" layoutY="392.0" text="Full name" />
+      <Label layoutX="427.0" layoutY="342.0" text="(only admin, seller, store keeper)" />
 
     </children>
 </AnchorPane>

@@ -15,46 +15,4 @@
         <inShop>false</inShop>
         <amount>5</amount>
     </book>
-<book>
-<title>My life</title>
-<author>Richards</author>
-<genre>bio</genre>
-<inShop>false</inShop>
-<amount>5</amount>
-</book>
-<book>
-<title>My life</title>
-<author>Richards</author>
-<genre>bio</genre>
-<inShop>false</inShop>
-<amount>5</amount>
-</book>
-<book>
-<title>My life</title>
-<author>Richards</author>
-<genre>bio</genre>
-<inShop>false</inShop>
-<amount>5</amount>
-</book>
-<book>
-<title>God's Father</title>
-<author>Pyuzo</author>
-<genre>Criminal</genre>
-<inShop>false</inShop>
-<amount>5</amount>
-</book>
-<book>
-<title>My life</title>
-<author>Richards</author>
-<genre>bio</genre>
-<inShop>false</inShop>
-<amount>5</amount>
-</book>
-<book>
-<title>q</title>
-<author>q</author>
-<genre>q</genre>
-<inShop>false</inShop>
-<amount>5</amount>
-</book>
 </books>

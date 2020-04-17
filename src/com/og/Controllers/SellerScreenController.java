@@ -14,7 +14,7 @@ import java.util.List;
 public class SellerScreenController {
     public Label fullNameLabel;
 
-    List<Book> books;
+    List<Book> booksz;
 
     @FXML
     private TableView<Book> booksInShopTable;
@@ -32,14 +32,14 @@ public class SellerScreenController {
     private TableColumn<Book, Integer> amountColumn;
 
     public void showAllBooksInShop() {
-        books = XMLReturn.returnBooksInShop();
+        booksz = XMLReturn.returnBooksInShop();
 
         titleColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("title"));
         authorColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("author"));
         genreColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("genre"));
         amountColumn.setCellValueFactory(new PropertyValueFactory<Book, Integer>("amount"));
 
-        booksInShopTable.getItems().setAll(books);
+        booksInShopTable.getItems().setAll(booksz);
     }
 
     public void onButtonLogOutClick(ActionEvent actionEvent) {
@@ -59,10 +59,10 @@ public class SellerScreenController {
             return;
         }
 
-        Book selectedBook = books.get(selectedIndex);
+        Book selectedBook = booksz.get(selectedIndex);
         selectedBook.setAmount(selectedBook.getAmount() - 1);
-        XMLUpdate.updater(selectedBook.getTitle(),"Books");
-        booksInShopTable.getItems().setAll(books);
+        XMLUpdate.amountUpdater(selectedBook.getTitle(), "Books");
+        booksInShopTable.getItems().setAll(booksz);
         XMLAdd.addSale(selectedBook.getTitle(), selectedBook.getAmount());
     }
 
@@ -72,13 +72,16 @@ public class SellerScreenController {
             return;
         }
 
-        Book selectedBook = books.get(selectedIndex);
-        XMLAdd.addIn(selectedBook.getTitle(), selectedBook.getAuthor(), selectedBook.getGenre(),5,"NeedIt","need");
-        booksInShopTable.getItems().setAll(books);
+        Book selectedBook = booksz.get(selectedIndex);
+        XMLAdd.addIn(selectedBook.getTitle(), selectedBook.getAuthor(), selectedBook.getGenre(), 5, "NeedIt", "need");
+        booksInShopTable.getItems().setAll(booksz);
     }
 
     public void onButtonFromStockClick(ActionEvent actionEvent) {
         XMLAdd.addFromStockToShop();
-        booksInShopTable.getItems().setAll(books);
+        SellerScreenController sellerScreenController = FXMLHelper.loadScreenReturnController("SellerScreen");
+        sellerScreenController.userInfo();
+        sellerScreenController.showAllBooksInShop();
+        booksInShopTable.getItems().setAll(booksz);
     }
 }

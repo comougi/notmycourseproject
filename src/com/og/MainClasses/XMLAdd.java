@@ -156,6 +156,8 @@ public class XMLAdd {
         for (int i = 0; i < deliveryBooks.size(); i++) {
             addBook(deliveryBooks.get(i).getTitle(), deliveryBooks.get(i).getAuthor(), deliveryBooks.get(i).getGenre());
         }
+
+
     }
 
     public static void addUser(String login, String password, String position, String fullName) {
@@ -202,4 +204,6 @@ public class XMLAdd {
             exception.printStackTrace();
         }
     }
+
+
 }

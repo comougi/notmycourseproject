@@ -10,6 +10,9 @@ import org.w3c.dom.NodeList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -85,7 +88,7 @@ public class XMLReturn {
 
         for (int i = 0; i < userList.size(); i++) {
             if (u.getLogin().equals(userList.get(i).getLogin()) && u.getPassword().equals(userList.get(i).getPassword())) {
-                u.activeUser = userList.get(i);
+                User.activeUser = userList.get(i);
                 if (userList.get(i).getPosition().equals("admin")) {
                     AdminScreenController adminScreenController = FXMLHelper.loadScreenReturnController("AdminScreen");
                     adminScreenController.showAllBooks();
@@ -103,4 +106,24 @@ public class XMLReturn {
             }
         }
     }
+
+
+    public static void cleanUp(String file) {
+        FileWriter fw = null;
+        PrintWriter pw = null;
+        try {
+            fw = new FileWriter
+                    (String.format("src/com/og/XMLs/%s",file));
+            pw = new PrintWriter (fw);
+            pw.write("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n" +
+                    "<books>\n" +
+                    "    \n" +
+                    "</books>");
+            pw.close();
+            fw.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
 }
