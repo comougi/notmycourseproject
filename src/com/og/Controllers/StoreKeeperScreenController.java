@@ -81,6 +81,7 @@ public class StoreKeeperScreenController {
 
     public void onButtonClearClick(ActionEvent actionEvent) {
         XMLReturn.cleanUp("NeedIt","needs");
+        needItTable.getItems().setAll(books2);
     }
 }
 
