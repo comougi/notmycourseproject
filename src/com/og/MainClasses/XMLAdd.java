@@ -86,7 +86,7 @@ public class XMLAdd {
             newSale.appendChild(newTitle);
 
 
-            Element newLeft = document.createElement("left");
+            Element newLeft = document.createElement("amount");
             newLeft.appendChild(document.createTextNode(Integer.toString(amount - 1)));
             newSale.appendChild(newLeft);
 

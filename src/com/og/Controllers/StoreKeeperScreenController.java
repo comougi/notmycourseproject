@@ -78,5 +78,9 @@ public class StoreKeeperScreenController {
     public void onButtonAcceptNewBooksClick(ActionEvent actionEvent) {
         FXMLHelper.loadScreen("AddInStockScreen");
     }
+
+    public void onButtonClearClick(ActionEvent actionEvent) {
+        XMLReturn.cleanUp("NeedIt","needs");
+    }
 }
 

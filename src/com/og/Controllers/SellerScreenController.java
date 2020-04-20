@@ -82,6 +82,7 @@ public class SellerScreenController {
         SellerScreenController sellerScreenController = FXMLHelper.loadScreenReturnController("SellerScreen");
         sellerScreenController.userInfo();
         sellerScreenController.showAllBooksInShop();
+        XMLReturn.cleanUp("Delivery","books");
         booksInShopTable.getItems().setAll(booksz);
     }
 }

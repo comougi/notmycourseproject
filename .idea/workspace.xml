@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82ed9098-a70a-4502-889a-e3edd88d3a36" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/AdminScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/AdminScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/SellerScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/SellerScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/StoreKeeperScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/StoreKeeperScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/og/MainClasses/XMLAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/MainClasses/XMLAdd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/og/MainClasses/XMLReturn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/MainClasses/XMLReturn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/og/UI/StoreKeeperScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/UI/StoreKeeperScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/og/XMLs/SaleInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/XMLs/SaleInfo.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,12 +30,15 @@
     <option name="defaultAccountId" value="0c117e2b-6a7a-4a3d-b471-eec59d902049" />
   </component>
   <component name="ProjectId" id="1acb9ToGx7ZP7gzMgNJbwW8X3sk" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -243,10 +252,18 @@
       <option name="project" value="LOCAL" />
       <updated>1587121463649</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="add diagrams">
+      <created>1587380357692</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1587380357692</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init" />
     <MESSAGE value="update WorkWIthXML.java &amp; Users.xml" />
     <MESSAGE value="add validation method" />
@@ -271,7 +288,8 @@
     <MESSAGE value="fxi bugs" />
     <MESSAGE value="modify UI" />
     <MESSAGE value="add delete button and modify" />
-    <option name="LAST_COMMIT_MESSAGE" value="add delete button and modify" />
+    <MESSAGE value="add diagrams" />
+    <option name="LAST_COMMIT_MESSAGE" value="add diagrams" />
   </component>
   <component name="WindowStateProjectService">
     <state x="536" y="219" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587071665916">
@@ -290,10 +308,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1587073765531" />
-    <state x="472" y="0" key="CommitChangelistDialog2" timestamp="1587121462376">
+    <state x="472" y="0" key="CommitChangelistDialog2" timestamp="1587380356084">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="472" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1587121462376" />
+    <state x="472" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1587380356084" />
     <state x="199" y="52" key="DiffContextDialog" timestamp="1587075876749">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -342,9 +360,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="349" y="160" key="IDE.errors.dialog/0.0.1536.834@0.0.1536.834" timestamp="1587046489149" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1587121483613">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1587380360230">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1587121483613" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1587380360230" />
   </component>
 </project>

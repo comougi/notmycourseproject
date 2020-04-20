@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<needs>
-    <need>
+<books>
+    <book>
         <title>President</title>
         <amount>5</amount>
-    </need>
+    </book>
 
-</needs>
+</books>
