@@ -3,17 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="82ed9098-a70a-4502-889a-e3edd88d3a36" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/courseproject/com/og/UI/RegistrationScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/courseproject/com/og/UI/RegistrationScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/courseproject/com/og/UI/StartScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/courseproject/com/og/UI/StartScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/AdminScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/AdminScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/SellerScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/SellerScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/MainClasses/XMLAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/MainClasses/XMLAdd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/MainClasses/XMLReturn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/MainClasses/XMLReturn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/MainClasses/XMLUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/MainClasses/XMLUpdate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/UI/AdminScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/UI/AdminScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/XMLs/Books" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/XMLs/Books" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/XMLs/Delivery" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/XMLs/Delivery" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/XMLs/Stock" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/XMLs/Stock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +39,7 @@
   <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.og.MainClasses.Main" />
-      <module name="courseproject" />
+      <module name="BookShop" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.og.MainClasses.*" />
@@ -63,7 +52,7 @@
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.og.Main" />
-      <module name="courseproject" />
+      <module name="BookShop" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -72,8 +61,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main (1)" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Main (1)" />
     </list>
     <recent_temporary>
       <list>
@@ -247,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587111812370</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="add delete button and modify">
+      <created>1587121463649</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1587121463649</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -274,7 +270,8 @@
     <MESSAGE value="make Users.xml clear" />
     <MESSAGE value="fxi bugs" />
     <MESSAGE value="modify UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify UI" />
+    <MESSAGE value="add delete button and modify" />
+    <option name="LAST_COMMIT_MESSAGE" value="add delete button and modify" />
   </component>
   <component name="WindowStateProjectService">
     <state x="536" y="219" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587071665916">
@@ -293,10 +290,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1587073765531" />
-    <state x="472" y="0" key="CommitChangelistDialog2" timestamp="1587111810882">
+    <state x="472" y="0" key="CommitChangelistDialog2" timestamp="1587121462376">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="472" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1587111810882" />
+    <state x="472" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1587121462376" />
     <state x="199" y="52" key="DiffContextDialog" timestamp="1587075876749">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -345,9 +342,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="349" y="160" key="IDE.errors.dialog/0.0.1536.834@0.0.1536.834" timestamp="1587046489149" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1587111814857">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1587121483613">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1587111814857" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1587121483613" />
   </component>
 </project>
