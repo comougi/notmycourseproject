@@ -23,6 +23,6 @@
       <Button layoutX="628.0" layoutY="660.0" mnemonicParsing="false" onAction="#onButtonLogOutCLick" text="Log out" />
       <Label layoutX="126.0" layoutY="212.0" text="On stock" />
       <Label layoutX="506.0" layoutY="212.0" text="Need" />
-      <Button onAction="#onButtonClearClick" layoutX="495.0" layoutY="445.0" mnemonicParsing="false" text="Clear" />
+      <Button layoutX="495.0" layoutY="445.0" mnemonicParsing="false" onAction="#onButtonClearClick" text="Delete" />
     </children>
 </AnchorPane>
