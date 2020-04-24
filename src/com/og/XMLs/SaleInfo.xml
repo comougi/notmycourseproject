@@ -5,4 +5,76 @@
         <amount>5</amount>
     </book>
 
+    <book>
+        <title>God's Father</title>
+        <amount>1</amount>
+    </book>
+<book>
+<title>My life</title>
+<amount>-1</amount>
+</book>
+<book>
+<title>God's Father</title>
+<amount>0</amount>
+</book>
+<book>
+<title>God's Father</title>
+<amount>-1</amount>
+</book>
+<book>
+<title>God's Father</title>
+<amount>-1</amount>
+</book>
+<book>
+<title>God's Father</title>
+<amount>0</amount>
+</book>
+<book>
+<title>God's Father</title>
+<amount>-1</amount>
+</book>
+<book>
+<title>God's Father</title>
+<amount>1</amount>
+</book>
+<book>
+<title>God's Father</title>
+<amount>0</amount>
+</book>
+<book>
+<title>God's Father</title>
+<amount>-1</amount>
+</book>
+<book>
+<title>God's Father</title>
+<amount>0</amount>
+</book>
+<book>
+<title>God's Father</title>
+<amount>1</amount>
+</book>
+<book>
+<title>God's Father</title>
+<amount>0</amount>
+</book>
+<book>
+<title>God's Father</title>
+<amount>-1</amount>
+</book>
+<book>
+<title>President</title>
+<amount>0</amount>
+</book>
+<book>
+<title>President</title>
+<amount>-1</amount>
+</book>
+<book>
+<title>President</title>
+<amount>0</amount>
+</book>
+<book>
+<title>President</title>
+<amount>-1</amount>
+</book>
 </books>

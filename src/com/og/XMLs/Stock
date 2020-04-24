@@ -16,4 +16,11 @@
         <amount>10</amount>
     </book>
 
+    <book>
+        <title>Zz</title>
+        <author>zz</author>
+        <genre>zz</genre>
+        <inShop>false</inShop>
+        <amount>4</amount>
+    </book>
 </books>

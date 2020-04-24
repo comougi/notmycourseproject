@@ -72,7 +72,6 @@ public class AdminScreenController {
 
         b.remove(selectedIndex);
         XMLReturn.cleanUp("Books", "books");
-        XMLReturn.cleanUp("Delivery", "books");
         for (int i = 0; i < b.size(); i++) {
             XMLAdd.addBook(b.get(i).getTitle(), b.get(i).getAuthor(), b.get(i).getGenre());
         }

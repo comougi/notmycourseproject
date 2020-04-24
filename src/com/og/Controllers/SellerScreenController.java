@@ -62,8 +62,19 @@ public class SellerScreenController {
         Book selectedBook = booksz.get(selectedIndex);
         selectedBook.setAmount(selectedBook.getAmount() - 1);
         XMLUpdate.amountUpdater(selectedBook.getTitle(), "Books");
-        booksInShopTable.getItems().setAll(booksz);
         XMLAdd.addSale(selectedBook.getTitle(), selectedBook.getAmount());
+        List<Book> b = XMLReturn.returnBooksInShop();
+        List<Book> b1 = XMLReturn.returnBooksIn("Books", "book");
+        for (int i = 0; i < b1.size(); i++) {
+            if (b1.get(i).getAmount() == 0) {
+                b1.get(i).setInShop(false);
+            }
+        }
+        XMLReturn.cleanUp("Books", "books");
+        for (int i = 0; i < b1.size(); i++) {
+            XMLAdd.addIn(b1.get(i).getTitle(), b1.get(i).getAuthor(), b1.get(i).getGenre(), b1.get(i).getAmount(), b1.get(i).isInShop(), "Books", "book");
+        }
+        booksInShopTable.getItems().setAll(b);
     }
 
     public void onButtonNeedItClick(ActionEvent actionEvent) {
@@ -73,7 +84,7 @@ public class SellerScreenController {
         }
 
         Book selectedBook = booksz.get(selectedIndex);
-        XMLAdd.addIn(selectedBook.getTitle(), selectedBook.getAuthor(), selectedBook.getGenre(), 5, "NeedIt", "need");
+        XMLAdd.addIn(selectedBook.getTitle(), selectedBook.getAuthor(), selectedBook.getGenre(), 5, false, "NeedIt", "need");
         booksInShopTable.getItems().setAll(booksz);
     }
 
@@ -82,7 +93,7 @@ public class SellerScreenController {
         SellerScreenController sellerScreenController = FXMLHelper.loadScreenReturnController("SellerScreen");
         sellerScreenController.userInfo();
         sellerScreenController.showAllBooksInShop();
-        XMLReturn.cleanUp("Delivery","books");
+        XMLReturn.cleanUp("Delivery", "books");
         booksInShopTable.getItems().setAll(booksz);
     }
 }

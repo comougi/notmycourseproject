@@ -18,7 +18,7 @@ public class AddInStockScreenController {
         String genre = genreField.getText();
         int amount = Integer.parseInt(amountField.getText());
 
-        XMLAdd.addIn(title, author, genre, amount, "Stock", "book");
+        XMLAdd.addIn(title, author, genre, amount,false, "Stock", "book");
 
         StoreKeeperScreenController storeKeeperScreenController = FXMLHelper.loadScreenReturnController("StoreKeeperScreen");
         storeKeeperScreenController.userInfo();

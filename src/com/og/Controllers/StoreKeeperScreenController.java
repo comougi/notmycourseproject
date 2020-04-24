@@ -1,7 +1,10 @@
 package com.og.Controllers;
 
 import com.og.FXMLHelper;
-import com.og.MainClasses.*;
+import com.og.MainClasses.Book;
+import com.og.MainClasses.User;
+import com.og.MainClasses.XMLAdd;
+import com.og.MainClasses.XMLReturn;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -64,7 +67,7 @@ public class StoreKeeperScreenController {
             return;
         }
         Book selectedBook = books1.get(selectedIndex);
-        XMLAdd.addIn(selectedBook.getTitle(), selectedBook.getAuthor(), selectedBook.getGenre(), 5, "Delivery", "book");
+        XMLAdd.addIn(selectedBook.getTitle(), selectedBook.getAuthor(), selectedBook.getGenre(), 1, false, "Delivery", "book");
         selectedBook.setAmount(selectedBook.getAmount() - 1);
         inStockTable.getItems().setAll(books1);
     }
@@ -80,7 +83,19 @@ public class StoreKeeperScreenController {
     }
 
     public void onButtonClearClick(ActionEvent actionEvent) {
-        XMLReturn.cleanUp("NeedIt","needs");
+        int selectedIndex = needItTable.getSelectionModel().getSelectedIndex();
+        if (selectedIndex == -1) {
+            return;
+        }
+        Book selectedBook = books2.get(selectedIndex);
+        books2.remove(selectedIndex);
+        List<Book> b = XMLReturn.returnBooksIn("NeedIt", "need");
+
+        b.remove(selectedIndex);
+        XMLReturn.cleanUp("NeedIt", "needs");
+        for (int i = 0; i < b.size(); i++) {
+            XMLAdd.addIn(b.get(i).getTitle(), b.get(i).getAuthor(), b.get(i).getGenre(), b.get(i).getAmount(), b.get(i).isInShop(), "NeedIt", "need");
+        }
         needItTable.getItems().setAll(books2);
     }
 }

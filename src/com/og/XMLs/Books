@@ -2,17 +2,17 @@
 <books>
 
     <book>
-        <title>My life</title>
-        <author>Richards</author>
-        <genre>bio</genre>
-        <amount>1</amount>
-        <inShop>true</inShop>
-    </book>
-    <book>
         <title>God's Father</title>
         <author>Pyuzo</author>
         <genre>Criminal</genre>
-        <amount>1</amount>
         <inShop>true</inShop>
-</book>
+        <amount>5</amount>
+    </book>
+    <book>
+        <title>President</title>
+        <author>Soloviev</author>
+        <genre>bio</genre>
+        <inShop>false</inShop>
+        <amount>0</amount>
+    </book>
 </books>

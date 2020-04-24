@@ -104,7 +104,7 @@ public class XMLAdd {
         }
     }
 
-    public static void addIn(String title, String author, String genre, int amount, String file, String tag) {
+    public static void addIn(String title, String author, String genre, int amount,boolean inShop, String file, String tag) {
         File xmlFile = new File(String.format("src/com/og/XMLs/%s", file));
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder;
@@ -129,7 +129,7 @@ public class XMLAdd {
             newNeed.appendChild(newGenre);
 
             Element newInShop = document.createElement("inShop");
-            newInShop.appendChild(document.createTextNode(Boolean.toString(false)));
+            newInShop.appendChild(document.createTextNode(Boolean.toString(inShop)));
             newNeed.appendChild(newInShop);
 
             Element newAmount = document.createElement("amount");

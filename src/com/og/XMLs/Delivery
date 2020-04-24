@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <books>
-    <book>
-        <title>My life</title>
-        <author>Richards</author>
-        <genre>bio</genre>
-        <inShop>false</inShop>
-        <amount>1</amount>
-    </book>
 
     <book>
         <title>God's Father</title>
@@ -15,4 +8,5 @@
         <inShop>false</inShop>
         <amount>5</amount>
     </book>
+
 </books>

@@ -27,7 +27,7 @@ public class XMLReturn {
         List<Book> bookInShopList = new ArrayList<Book>();
         try {
             for (int i = 0; i < bookList.size(); i++) {
-                if (bookList.get(i).isInShop()) {
+                if (bookList.get(i).isInShop() && bookList.get(i).getAmount() != 0) {
                     bookInShopList.add(bookList.get(i));
                 }
             }
@@ -108,17 +108,17 @@ public class XMLReturn {
     }
 
 
-    public static void cleanUp(String file,String tag) {
+    public static void cleanUp(String file, String tag) {
         FileWriter fw = null;
         PrintWriter pw = null;
         try {
             fw = new FileWriter
-                    (String.format("src/com/og/XMLs/%s",file));
-            pw = new PrintWriter (fw);
+                    (String.format("src/com/og/XMLs/%s", file));
+            pw = new PrintWriter(fw);
             pw.write(String.format("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n" +
                     "<%s>\n" +
                     "    \n" +
-                    "</%s>",tag,tag));
+                    "</%s>", tag, tag));
             pw.close();
             fw.close();
         } catch (IOException ex) {
