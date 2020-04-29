@@ -6,11 +6,11 @@
 <AnchorPane prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.og.Controllers.SellerScreenController">
    <children>
       <Label fx:id="fullNameLabel" layoutX="32.0" layoutY="14.0" text="Label" />
-      <TableView fx:id="booksInShopTable" layoutX="200.0" layoutY="241.0" prefHeight="200.0" prefWidth="299.0">
+      <TableView fx:id="productsInShopTable" layoutX="200.0" layoutY="241.0" prefHeight="200.0" prefWidth="299.0">
         <columns>
-          <TableColumn fx:id="titleColumn" prefWidth="75.0" text="Title" />
-          <TableColumn fx:id="authorColumn" prefWidth="75.0" text="Author" />
-            <TableColumn fx:id="genreColumn" prefWidth="75.0" text="Genre" />
+          <TableColumn fx:id="modelColumn" prefWidth="75.0" text="Model" />
+          <TableColumn fx:id="brandColumn" prefWidth="75.0" text="Brand" />
+            <TableColumn fx:id="typeColumn" prefWidth="75.0" text="Type" />
             <TableColumn fx:id="amountColumn" prefWidth="75.0" text="Amount" />
         </columns>
       </TableView>

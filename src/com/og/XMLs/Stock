@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<books>
-    <book>
-        <title>God's Father</title>
-        <author>Pyuzo</author>
-        <genre>Criminal</genre>
+<products>
+    <product>
+        <model>God's Father</model>
+        <brand>Pyuzo</brand>
+        <type>Criminal</type>
         <inShop>false</inShop>
         <amount>10</amount>
-    </book>
+    </product>
 
-    <book>
-        <title>My life</title>
-        <author>Richards</author>
-        <genre>bio</genre>
+    <product>
+        <model>My life</model>
+        <brand>Richards</brand>
+        <type>bio</type>
         <inShop>false</inShop>
         <amount>10</amount>
-    </book>
+    </product>
 
-    <book>
-        <title>Zz</title>
-        <author>zz</author>
-        <genre>zz</genre>
+    <product>
+        <model>Zz</model>
+        <brand>zz</brand>
+        <type>zz</type>
         <inShop>false</inShop>
         <amount>4</amount>
-    </book>
-</books>
+    </product>
+</products>

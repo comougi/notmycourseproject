@@ -25,10 +25,10 @@ public class XMLUpdate {
             builder = factory.newDocumentBuilder();
             Document doc = builder.parse(xmlFile);
             doc.getDocumentElement().normalize();
-            List<Book> books = XMLReturn.returnBooksIn("Books", "book");
+            List<Product> products = XMLReturn.returnProductsIn("Products", "product");
             int index = 0;
-            for (int i = 0; i < books.size(); i++) {
-                if (books.get(i).getTitle().equals(title)) {
+            for (int i = 0; i < products.size(); i++) {
+                if (products.get(i).getModel().equals(title)) {
                     index = i;
                 }
             }
@@ -40,7 +40,7 @@ public class XMLUpdate {
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
             DOMSource source = new DOMSource(doc);
-            StreamResult result = new StreamResult(new File("src/com/og/XMLs/Books"));
+            StreamResult result = new StreamResult(new File("src/com/og/XMLs/Products"));
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             transformer.transform(source, result);
 
@@ -51,7 +51,7 @@ public class XMLUpdate {
     }
 
     private static void updateAmount(Document doc, int index) {
-        NodeList books = doc.getElementsByTagName("book");
+        NodeList books = doc.getElementsByTagName("product");
         Element book = null;
 
         book = (Element) books.item(index);

@@ -1,80 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<books>
-    <book>
-        <title>President</title>
+<products>
+    <product>
+        <model>President</model>
         <amount>5</amount>
-    </book>
+    </product>
 
-    <book>
-        <title>God's Father</title>
+    <product>
+        <model>God's Father</model>
         <amount>1</amount>
-    </book>
-<book>
-<title>My life</title>
-<amount>-1</amount>
-</book>
-<book>
-<title>God's Father</title>
-<amount>0</amount>
-</book>
-<book>
-<title>God's Father</title>
-<amount>-1</amount>
-</book>
-<book>
-<title>God's Father</title>
-<amount>-1</amount>
-</book>
-<book>
-<title>God's Father</title>
-<amount>0</amount>
-</book>
-<book>
-<title>God's Father</title>
-<amount>-1</amount>
-</book>
-<book>
-<title>God's Father</title>
-<amount>1</amount>
-</book>
-<book>
-<title>God's Father</title>
-<amount>0</amount>
-</book>
-<book>
-<title>God's Father</title>
-<amount>-1</amount>
-</book>
-<book>
-<title>God's Father</title>
-<amount>0</amount>
-</book>
-<book>
-<title>God's Father</title>
-<amount>1</amount>
-</book>
-<book>
-<title>God's Father</title>
-<amount>0</amount>
-</book>
-<book>
-<title>God's Father</title>
-<amount>-1</amount>
-</book>
-<book>
-<title>President</title>
-<amount>0</amount>
-</book>
-<book>
-<title>President</title>
-<amount>-1</amount>
-</book>
-<book>
-<title>President</title>
-<amount>0</amount>
-</book>
-<book>
-<title>President</title>
-<amount>-1</amount>
-</book>
-</books>
+    </product>
+
+</products>

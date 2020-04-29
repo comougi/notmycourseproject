@@ -18,19 +18,19 @@ public class XMLGet {
         return user;
     }
 
-    public static Book getBook(Node node) {
-        Book book = new Book();
+    public static Product getProduct(Node node) {
+        Product product = new Product();
         if (node.getNodeType() == Node.ELEMENT_NODE) {
             Element element = (Element) node;
-            book.setTitle(getTagValue("title", element));
-            book.setAuthor(getTagValue("author", element));
-            book.setGenre(getTagValue("genre", element));
-            book.setAmount(Integer.parseInt(getTagValue("amount", element)));
-            book.setInShop(Boolean.parseBoolean(getTagValue("inShop", element)));
+            product.setModel(getTagValue("model", element));
+            product.setBrand(getTagValue("brand", element));
+            product.setType(getTagValue("type", element));
+            product.setAmount(Integer.parseInt(getTagValue("amount", element)));
+            product.setInShop(Boolean.parseBoolean(getTagValue("inShop", element)));
 
         }
 
-        return book;
+        return product;
     }
 
     public static String getTagValue(String tag, Element element) {

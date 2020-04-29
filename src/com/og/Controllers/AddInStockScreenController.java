@@ -1,33 +1,33 @@
 package com.og.Controllers;
 
-import com.og.FXMLHelper;
+import com.og.FXMLService;
 import com.og.MainClasses.XMLAdd;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
 
 public class AddInStockScreenController {
 
-    public TextField titleField;
-    public TextField authorField;
-    public TextField genreField;
+    public TextField modelField;
+    public TextField brandField;
+    public TextField typeField;
     public TextField amountField;
 
     public void onAddButtonClick(ActionEvent actionEvent) {
-        String title = titleField.getText();
-        String author = authorField.getText();
-        String genre = genreField.getText();
+        String model = modelField.getText();
+        String brand = brandField.getText();
+        String type = typeField.getText();
         int amount = Integer.parseInt(amountField.getText());
 
-        XMLAdd.addIn(title, author, genre, amount,false, "Stock", "book");
+        XMLAdd.addIn(model, brand, type, amount,false, "Stock", "product");
 
-        StoreKeeperScreenController storeKeeperScreenController = FXMLHelper.loadScreenReturnController("StoreKeeperScreen");
+        StoreKeeperScreenController storeKeeperScreenController = FXMLService.loadScreenReturnController("StoreKeeperScreen");
         storeKeeperScreenController.userInfo();
         storeKeeperScreenController.showNeedItList();
-        storeKeeperScreenController.showBooksInStock();
+        storeKeeperScreenController.showProductsInStock();
     }
 
 
     public void onBackButtonClick(ActionEvent actionEvent) {
-        FXMLHelper.backScreen();
+        FXMLService.backScreen();
     }
 }

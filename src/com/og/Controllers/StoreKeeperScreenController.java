@@ -1,7 +1,7 @@
 package com.og.Controllers;
 
-import com.og.FXMLHelper;
-import com.og.MainClasses.Book;
+import com.og.FXMLService;
+import com.og.MainClasses.Product;
 import com.og.MainClasses.User;
 import com.og.MainClasses.XMLAdd;
 import com.og.MainClasses.XMLReturn;
@@ -18,40 +18,40 @@ public class StoreKeeperScreenController {
 
     public Label fullNameLabel;
 
-    List<Book> books1;
-    List<Book> books2;
+    List<Product> products1;
+    List<Product> products2;
     @FXML
-    private TableView<Book> inStockTable;
+    private TableView<Product> inStockTable;
     @FXML
-    private TableColumn<Book, String> titleStockColumn;
+    private TableColumn<Product, String> modelStockColumn;
     @FXML
-    private TableColumn<Book, Integer> amountStockColumn;
+    private TableColumn<Product, Integer> amountStockColumn;
     @FXML
-    private TableView<Book> needItTable;
+    private TableView<Product> needItTable;
 
     @FXML
-    private TableColumn<Book, String> titleNeedColumn;
+    private TableColumn<Product, String> modelNeedColumn;
 
     @FXML
-    private TableColumn<Book, Integer> amountNeedColumn;
+    private TableColumn<Product, Integer> amountNeedColumn;
 
 
-    public void showBooksInStock() {
-        books1 = XMLReturn.returnBooksIn("Stock", "book");
+    public void showProductsInStock() {
+        products1 = XMLReturn.returnProductsIn("Stock", "product");
 
-        titleStockColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("title"));
-        amountStockColumn.setCellValueFactory(new PropertyValueFactory<Book, Integer>("amount"));
+        modelStockColumn.setCellValueFactory(new PropertyValueFactory<Product, String>("model"));
+        amountStockColumn.setCellValueFactory(new PropertyValueFactory<Product, Integer>("amount"));
 
-        inStockTable.getItems().setAll(books1);
+        inStockTable.getItems().setAll(products1);
     }
 
     public void showNeedItList() {
-        books2 = XMLReturn.returnBooksIn("NeedIt", "need");
+        products2 = XMLReturn.returnProductsIn("NeedIt", "need");
 
-        titleNeedColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("title"));
-        amountNeedColumn.setCellValueFactory(new PropertyValueFactory<Book, Integer>("amount"));
+        modelNeedColumn.setCellValueFactory(new PropertyValueFactory<Product, String>("model"));
+        amountNeedColumn.setCellValueFactory(new PropertyValueFactory<Product, Integer>("amount"));
 
-        needItTable.getItems().setAll(books2);
+        needItTable.getItems().setAll(products2);
     }
 
     public void userInfo() {
@@ -66,20 +66,20 @@ public class StoreKeeperScreenController {
         if (selectedIndex == -1) {
             return;
         }
-        Book selectedBook = books1.get(selectedIndex);
-        XMLAdd.addIn(selectedBook.getTitle(), selectedBook.getAuthor(), selectedBook.getGenre(), 1, false, "Delivery", "book");
-        selectedBook.setAmount(selectedBook.getAmount() - 1);
-        inStockTable.getItems().setAll(books1);
+        Product selectedProduct = products1.get(selectedIndex);
+        XMLAdd.addIn(selectedProduct.getModel(), selectedProduct.getBrand(), selectedProduct.getType(), 1, false, "Delivery", "book");
+        selectedProduct.setAmount(selectedProduct.getAmount() - 1);
+        inStockTable.getItems().setAll(products1);
     }
 
     public void onButtonLogOutCLick(ActionEvent actionEvent) {
         User.activeUser = null;
-        FXMLHelper.loadScreen("StartScreen");
+        FXMLService.loadScreen("StartScreen");
     }
 
 
     public void onButtonAcceptNewBooksClick(ActionEvent actionEvent) {
-        FXMLHelper.loadScreen("AddInStockScreen");
+        FXMLService.loadScreen("AddInStockScreen");
     }
 
     public void onButtonClearClick(ActionEvent actionEvent) {
@@ -87,16 +87,16 @@ public class StoreKeeperScreenController {
         if (selectedIndex == -1) {
             return;
         }
-        Book selectedBook = books2.get(selectedIndex);
-        books2.remove(selectedIndex);
-        List<Book> b = XMLReturn.returnBooksIn("NeedIt", "need");
+        Product selectedProduct = products2.get(selectedIndex);
+        products2.remove(selectedIndex);
+        List<Product> b = XMLReturn.returnProductsIn("NeedIt", "need");
 
         b.remove(selectedIndex);
         XMLReturn.cleanUp("NeedIt", "needs");
         for (int i = 0; i < b.size(); i++) {
-            XMLAdd.addIn(b.get(i).getTitle(), b.get(i).getAuthor(), b.get(i).getGenre(), b.get(i).getAmount(), b.get(i).isInShop(), "NeedIt", "need");
+            XMLAdd.addIn(b.get(i).getModel(), b.get(i).getBrand(), b.get(i).getType(), b.get(i).getAmount(), b.get(i).isInShop(), "NeedIt", "need");
         }
-        needItTable.getItems().setAll(books2);
+        needItTable.getItems().setAll(products2);
     }
 }
 

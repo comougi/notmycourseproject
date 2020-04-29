@@ -2,9 +2,9 @@
 <needs>
 
     <need>
-        <title>President</title>
-        <author>Solovyev</author>
-        <genre>bio</genre>
+        <model>President</model>
+        <brand>Solovyev</brand>
+        <type>bio</type>
         <inShop>false</inShop>
         <amount>5</amount>
     </need>

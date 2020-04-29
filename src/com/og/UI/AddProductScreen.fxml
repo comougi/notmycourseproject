@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.og.Controllers.AddProductScreenController">
+   <children>
+      <TextField fx:id="modelField" layoutX="276.0" layoutY="289.0" />
+      <TextField fx:id="brandField" layoutX="276.0" layoutY="337.0" />
+      <TextField fx:id="typeField" layoutX="276.0" layoutY="385.0" />
+      <Button layoutX="425.0" layoutY="440.0" mnemonicParsing="false" onAction="#onAddButtonClick" text="Add" />
+      <Button layoutX="70.0" layoutY="609.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Back" />
+      <Label layoutX="223.0" layoutY="293.0" text="Model" />
+      <Label layoutX="223.0" layoutY="341.0" text="Brand" />
+      <Label layoutX="223.0" layoutY="389.0" text="Type" />
+   </children>
+</AnchorPane>

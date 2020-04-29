@@ -1,7 +1,7 @@
 package com.og.MainClasses;
 
 import com.og.Controllers.AdminScreenController;
-import com.og.FXMLHelper;
+import com.og.FXMLService;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -16,9 +16,9 @@ import java.io.File;
 import java.util.List;
 
 public class XMLAdd {
-    public static void addBook(String title, String author, String genre) {
+    public static void addProduct(String model, String brand, String type) {
 
-        File xmlFile = new File("src/com/og/XMLs/Books");
+        File xmlFile = new File("src/com/og/XMLs/Products");
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder;
         try {
@@ -27,48 +27,48 @@ public class XMLAdd {
             document.getDocumentElement().normalize();
             Element nList = document.getDocumentElement();
 
-            Element newBook = document.createElement("book");
+            Element newProduct = document.createElement("product");
 
-            Element newTitle = document.createElement("title");
-            newTitle.appendChild(document.createTextNode(title));
-            newBook.appendChild(newTitle);
+            Element newModel = document.createElement("model");
+            newModel.appendChild(document.createTextNode(model));
+            newProduct.appendChild(newModel);
 
-            Element newAuthor = document.createElement("author");
-            newAuthor.appendChild(document.createTextNode(author));
-            newBook.appendChild(newAuthor);
+            Element newBrand = document.createElement("brand");
+            newBrand.appendChild(document.createTextNode(brand));
+            newProduct.appendChild(newBrand);
 
-            Element newGenre = document.createElement("genre");
-            newGenre.appendChild(document.createTextNode(genre));
-            newBook.appendChild(newGenre);
+            Element newType = document.createElement("type");
+            newType.appendChild(document.createTextNode(type));
+            newProduct.appendChild(newType);
 
             Element newAmount = document.createElement("amount");
             newAmount.appendChild(document.createTextNode(Integer.toString(1)));
-            newBook.appendChild(newAmount);
+            newProduct.appendChild(newAmount);
 
             Element newInShop = document.createElement("inShop");
             newInShop.appendChild(document.createTextNode(Boolean.toString(true)));
-            newBook.appendChild(newInShop);
+            newProduct.appendChild(newInShop);
 
 
-            nList.appendChild(newBook);
+            nList.appendChild(newProduct);
 
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 
-            StreamResult result = new StreamResult(new File("src/com/og/XMLs/Books"));
+            StreamResult result = new StreamResult(new File("src/com/og/XMLs/Products"));
             DOMSource source = new DOMSource(document);
             transformer.transform(source, result);
 
 
-            AdminScreenController adminScreenController = FXMLHelper.loadScreenReturnController("AdminScreen");
-            adminScreenController.showAllBooks();
+            AdminScreenController adminScreenController = FXMLService.loadScreenReturnController("AdminScreen");
+            adminScreenController.showAllProducts();
             adminScreenController.userInfo();
         } catch (Exception exception) {
             exception.printStackTrace();
         }
     }
 
-    public static void addSale(String title, int amount) {
+    public static void addSale(String model, int amount) {
 
         File xmlFile = new File("src/com/og/XMLs/SaleInfo.xml");
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -79,11 +79,11 @@ public class XMLAdd {
             document.getDocumentElement().normalize();
             Element nList = document.getDocumentElement();
 
-            Element newSale = document.createElement("book");
+            Element newSale = document.createElement("product");
 
-            Element newTitle = document.createElement("title");
-            newTitle.appendChild(document.createTextNode(title));
-            newSale.appendChild(newTitle);
+            Element newModel = document.createElement("model");
+            newModel.appendChild(document.createTextNode(model));
+            newSale.appendChild(newModel);
 
 
             Element newLeft = document.createElement("amount");
@@ -104,7 +104,7 @@ public class XMLAdd {
         }
     }
 
-    public static void addIn(String title, String author, String genre, int amount,boolean inShop, String file, String tag) {
+    public static void addIn(String model, String brand, String type, int amount,boolean inShop, String file, String tag) {
         File xmlFile = new File(String.format("src/com/og/XMLs/%s", file));
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder;
@@ -116,17 +116,17 @@ public class XMLAdd {
 
             Element newNeed = document.createElement(tag);
 
-            Element newTitle = document.createElement("title");
-            newTitle.appendChild(document.createTextNode(title));
-            newNeed.appendChild(newTitle);
+            Element newModel = document.createElement("model");
+            newModel.appendChild(document.createTextNode(model));
+            newNeed.appendChild(newModel);
 
-            Element newAuthor = document.createElement("author");
-            newAuthor.appendChild(document.createTextNode(author));
-            newNeed.appendChild(newAuthor);
+            Element newBrand = document.createElement("brand");
+            newBrand.appendChild(document.createTextNode(brand));
+            newNeed.appendChild(newBrand);
 
-            Element newGenre = document.createElement("genre");
-            newGenre.appendChild(document.createTextNode(genre));
-            newNeed.appendChild(newGenre);
+            Element newType = document.createElement("type");
+            newType.appendChild(document.createTextNode(type));
+            newNeed.appendChild(newType);
 
             Element newInShop = document.createElement("inShop");
             newInShop.appendChild(document.createTextNode(Boolean.toString(inShop)));
@@ -152,9 +152,9 @@ public class XMLAdd {
 
 
     public static void addFromStockToShop() {
-        List<Book> deliveryBooks = XMLReturn.returnBooksIn("Delivery", "book");
-        for (int i = 0; i < deliveryBooks.size(); i++) {
-            addBook(deliveryBooks.get(i).getTitle(), deliveryBooks.get(i).getAuthor(), deliveryBooks.get(i).getGenre());
+        List<Product> deliveryProducts = XMLReturn.returnProductsIn("Delivery", "product");
+        for (int i = 0; i < deliveryProducts.size(); i++) {
+            addProduct(deliveryProducts.get(i).getModel(), deliveryProducts.get(i).getBrand(), deliveryProducts.get(i).getType());
         }
 
 
@@ -199,7 +199,7 @@ public class XMLAdd {
             transformer.transform(source, result);
 
 
-            FXMLHelper.loadScreen("StartScreen");
+            FXMLService.loadScreen("StartScreen");
         } catch (Exception exception) {
             exception.printStackTrace();
         }

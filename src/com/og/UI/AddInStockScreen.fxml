@@ -5,15 +5,15 @@
 
 <AnchorPane prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.og.Controllers.AddInStockScreenController">
    <children>
-       <TextField fx:id="titleField" layoutX="276.0" layoutY="250.0" />
-       <TextField fx:id="authorField" layoutX="276.0" layoutY="300.0" />
-       <TextField fx:id="genreField" layoutX="276.0" layoutY="350.0" />
+       <TextField fx:id="modelField" layoutX="276.0" layoutY="250.0" />
+       <TextField fx:id="brandField" layoutX="276.0" layoutY="300.0" />
+       <TextField fx:id="typeField" layoutX="276.0" layoutY="350.0" />
        <Button layoutX="452.0" layoutY="435.0" mnemonicParsing="false" onAction="#onAddButtonClick" text="Add" />
        <Button layoutX="113.0" layoutY="596.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Back" />
       <TextField fx:id="amountField" layoutX="276.0" layoutY="394.0" />
-      <Label layoutX="212.0" layoutY="254.0" text="Title" />
-      <Label layoutX="212.0" layoutY="304.0" text="Author" />
-      <Label layoutX="212.0" layoutY="354.0" text="Genre" />
+      <Label layoutX="212.0" layoutY="254.0" text="Model" />
+      <Label layoutX="212.0" layoutY="304.0" text="Brand" />
+      <Label layoutX="212.0" layoutY="354.0" text="Type" />
       <Label layoutX="212.0" layoutY="398.0" text="Amount" />
    </children>
 </AnchorPane>

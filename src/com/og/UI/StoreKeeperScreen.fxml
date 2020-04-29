@@ -8,15 +8,15 @@
         <Label fx:id="fullNameLabel" layoutX="32.0" layoutY="21.0" text="Label" />
         <TableView fx:id="inStockTable" layoutX="68.0" layoutY="239.0" prefHeight="200.0" prefWidth="165.0">
             <columns>
-                <TableColumn fx:id="titleStockColumn" prefWidth="75.0" text="Title" />
+                <TableColumn fx:id="modelStockColumn" prefWidth="75.0" text="Model" />
                 <TableColumn fx:id="amountStockColumn" prefWidth="75.0" text="Amount" />
             </columns>
         </TableView>
-        <Button layoutX="94.0" layoutY="478.0" mnemonicParsing="false" onAction="#onButtonAcceptNewBooksClick" text="Accept new books" />
+        <Button layoutX="94.0" layoutY="478.0" mnemonicParsing="false" onAction="#onButtonAcceptNewBooksClick" text="Accept new products" />
         <Button layoutX="107.0" layoutY="445.0" mnemonicParsing="false" onAction="#onButtonSendToShopClick" text="Send to shop" />
         <TableView fx:id="needItTable" layoutX="444.0" layoutY="239.0" prefHeight="200.0" prefWidth="152.0">
             <columns>
-                <TableColumn fx:id="titleNeedColumn" prefWidth="75.0" text="Title" />
+                <TableColumn fx:id="modelNeedColumn" prefWidth="75.0" text="Model" />
                 <TableColumn fx:id="amountNeedColumn" prefWidth="75.0" text="Amount" />
             </columns>
         </TableView>

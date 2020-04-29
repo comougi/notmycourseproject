@@ -1,6 +1,6 @@
 package com.og.Controllers;
 
-import com.og.FXMLHelper;
+import com.og.FXMLService;
 import com.og.MainClasses.XMLReturn;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
@@ -30,6 +30,6 @@ public class StartScreenController {
 
 
     public void onButtonRegistrationClick(ActionEvent actionEvent) {
-        FXMLHelper.loadScreen("RegistrationScreen");
+        FXMLService.loadScreen("RegistrationScreen");
     }
 }

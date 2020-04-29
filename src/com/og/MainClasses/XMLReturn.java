@@ -3,7 +3,7 @@ package com.og.MainClasses;
 import com.og.Controllers.AdminScreenController;
 import com.og.Controllers.SellerScreenController;
 import com.og.Controllers.StoreKeeperScreenController;
-import com.og.FXMLHelper;
+import com.og.FXMLService;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
@@ -16,32 +16,32 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.og.MainClasses.XMLGet.getBook;
+import static com.og.MainClasses.XMLGet.getProduct;
 import static com.og.MainClasses.XMLGet.getUser;
 
 public class XMLReturn {
 
 
-    public static List<Book> returnBooksInShop() {
-        List<Book> bookList = returnBooksIn("Books", "book");
-        List<Book> bookInShopList = new ArrayList<Book>();
+    public static List<Product> returnProductsInShop() {
+        List<Product> productList = returnProductsIn("Products", "product");
+        List<Product> productInShopList = new ArrayList<Product>();
         try {
-            for (int i = 0; i < bookList.size(); i++) {
-                if (bookList.get(i).isInShop() && bookList.get(i).getAmount() != 0) {
-                    bookInShopList.add(bookList.get(i));
+            for (int i = 0; i < productList.size(); i++) {
+                if (productList.get(i).isInShop() && productList.get(i).getAmount() != 0) {
+                    productInShopList.add(productList.get(i));
                 }
             }
         } catch (Exception exception) {
             exception.printStackTrace();
         }
-        return bookInShopList;
+        return productInShopList;
     }
 
-    public static List<Book> returnBooksIn(String file, String tag) {
+    public static List<Product> returnProductsIn(String file, String tag) {
         File xmlFile = new File(String.format("src/com/og/XMLs/%s", file));
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder;
-        List<Book> bookList = new ArrayList<Book>();
+        List<Product> productList = new ArrayList<Product>();
         try {
             builder = factory.newDocumentBuilder();
             Document document = builder.parse(xmlFile);
@@ -50,13 +50,13 @@ public class XMLReturn {
 
 
             for (int i = 0; i < nodeList.getLength(); i++) {
-                bookList.add(getBook(nodeList.item(i)));
+                productList.add(getProduct(nodeList.item(i)));
             }
 
         } catch (Exception exc) {
             exc.printStackTrace();
         }
-        return bookList;
+        return productList;
     }
 
 
@@ -90,16 +90,16 @@ public class XMLReturn {
             if (u.getLogin().equals(userList.get(i).getLogin()) && u.getPassword().equals(userList.get(i).getPassword())) {
                 User.activeUser = userList.get(i);
                 if (userList.get(i).getPosition().equals("admin")) {
-                    AdminScreenController adminScreenController = FXMLHelper.loadScreenReturnController("AdminScreen");
-                    adminScreenController.showAllBooks();
+                    AdminScreenController adminScreenController = FXMLService.loadScreenReturnController("AdminScreen");
+                    adminScreenController.showAllProducts();
                     adminScreenController.userInfo();
                 } else if (userList.get(i).getPosition().equals("seller")) {
-                    SellerScreenController sellerScreenController = FXMLHelper.loadScreenReturnController("SellerScreen");
+                    SellerScreenController sellerScreenController = FXMLService.loadScreenReturnController("SellerScreen");
                     sellerScreenController.userInfo();
-                    sellerScreenController.showAllBooksInShop();
+                    sellerScreenController.showAllProductsInShop();
                 } else if (userList.get(i).getPosition().equals("store keeper")) {
-                    StoreKeeperScreenController storeKeeperScreenController = FXMLHelper.loadScreenReturnController("StoreKeeperScreen");
-                    storeKeeperScreenController.showBooksInStock();
+                    StoreKeeperScreenController storeKeeperScreenController = FXMLService.loadScreenReturnController("StoreKeeperScreen");
+                    storeKeeperScreenController.showProductsInStock();
                     storeKeeperScreenController.showNeedItList();
                     storeKeeperScreenController.userInfo();
                 }

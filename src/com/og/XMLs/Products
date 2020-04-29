@@ -5,8 +5,14 @@
         <model>God's Father</model>
         <brand>Pyuzo</brand>
         <type>Criminal</type>
-        <inShop>false</inShop>
+        <inShop>true</inShop>
         <amount>5</amount>
     </product>
-
+    <product>
+        <model>President</model>
+        <brand>Soloviev</brand>
+        <type>bio</type>
+        <inShop>false</inShop>
+        <amount>0</amount>
+    </product>
 </products>

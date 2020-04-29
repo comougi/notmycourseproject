@@ -1,7 +1,7 @@
 package com.og.Controllers;
 
-import com.og.FXMLHelper;
-import com.og.MainClasses.Book;
+import com.og.FXMLService;
+import com.og.MainClasses.Product;
 import com.og.MainClasses.User;
 import com.og.MainClasses.XMLAdd;
 import com.og.MainClasses.XMLReturn;
@@ -18,28 +18,28 @@ public class AdminScreenController {
 
 
     public Label fullNameLabel;
-    List<Book> books;
+    List<Product> products;
 
     @FXML
-    private TableView<Book> booksTable;
+    private TableView<Product> productsTable;
 
     @FXML
-    private TableColumn<Book, String> titleColumn;
+    private TableColumn<Product, String> modelColumn;
 
     @FXML
-    private TableColumn<Book, String> authorColumn;
+    private TableColumn<Product, String> brandColumn;
 
     @FXML
-    private TableColumn<Book, String> genreColumn;
+    private TableColumn<Product, String> typeColumn;
 
-    public void showAllBooks() {
-        books = XMLReturn.returnBooksIn("Books", "book");
+    public void showAllProducts() {
+        products = XMLReturn.returnProductsIn("Products", "product");
 
-        titleColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("title"));
-        authorColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("author"));
-        genreColumn.setCellValueFactory(new PropertyValueFactory<Book, String>("genre"));
+        modelColumn.setCellValueFactory(new PropertyValueFactory<Product, String>("model"));
+        brandColumn.setCellValueFactory(new PropertyValueFactory<Product, String>("brand"));
+        typeColumn.setCellValueFactory(new PropertyValueFactory<Product, String>("type"));
 
-        booksTable.getItems().setAll(books);
+        productsTable.getItems().setAll(products);
     }
 
     public void userInfo() {
@@ -48,33 +48,33 @@ public class AdminScreenController {
         }
     }
 
-    public void addNewBookButtonClick(ActionEvent actionEvent) {
-        FXMLHelper.loadScreen("AddBookScreen");
+    public void addNewProductButtonClick(ActionEvent actionEvent) {
+        FXMLService.loadScreen("AddProductScreen");
     }
 
     public void logOutButton(ActionEvent actionEvent) {
         User.activeUser = null;
-        FXMLHelper.loadScreen("StartScreen");
+        FXMLService.loadScreen("StartScreen");
     }
 
     public void onButtonBackClick(ActionEvent actionEvent) {
-        FXMLHelper.backScreen();
+        FXMLService.backScreen();
     }
 
     public void onButtonDeleteClick(ActionEvent actionEvent) {
-        int selectedIndex = booksTable.getSelectionModel().getSelectedIndex();
+        int selectedIndex = productsTable.getSelectionModel().getSelectedIndex();
         if (selectedIndex == -1) {
             return;
         }
-        Book selectedBook = books.get(selectedIndex);
-        books.remove(selectedIndex);
-        List<Book> b = XMLReturn.returnBooksIn("Books", "book");
+        Product selectedProduct = products.get(selectedIndex);
+        products.remove(selectedIndex);
+        List<Product> b = XMLReturn.returnProductsIn("Products", "product");
 
         b.remove(selectedIndex);
-        XMLReturn.cleanUp("Books", "books");
+        XMLReturn.cleanUp("Products", "products");
         for (int i = 0; i < b.size(); i++) {
-            XMLAdd.addBook(b.get(i).getTitle(), b.get(i).getAuthor(), b.get(i).getGenre());
+            XMLAdd.addProduct(b.get(i).getModel(), b.get(i).getBrand(), b.get(i).getType());
         }
-        booksTable.getItems().setAll(books);
+        productsTable.getItems().setAll(products);
     }
 }

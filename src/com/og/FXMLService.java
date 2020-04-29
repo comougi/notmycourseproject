@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Stack;
 
-public class FXMLHelper {
+public class FXMLService {
     private static final String pathToScreens = "\\UI\\";
     private static final Stack<Scene> chronologicalScenes = new Stack<>();
     private static Stage primaryStage;
@@ -25,7 +25,7 @@ public class FXMLHelper {
 
     public static void loadScreen(String screen) {
         try {
-            Parent root = FXMLLoader.load(FXMLHelper.class.getResource(pathToScreens + screen + ".fxml"));
+            Parent root = FXMLLoader.load(FXMLService.class.getResource(pathToScreens + screen + ".fxml"));
             createScreen(root);
         } catch (IOException e) {
             e.printStackTrace();
@@ -36,7 +36,7 @@ public class FXMLHelper {
         T controller = null;
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(FXMLHelper.class.getResource(pathToScreens + screen + ".fxml"));
+            loader.setLocation(FXMLService.class.getResource(pathToScreens + screen + ".fxml"));
             loader.load();
             Parent root = loader.getRoot();
             controller = loader.getController();
