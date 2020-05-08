@@ -12,6 +12,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class StoreKeeperScreenController {
@@ -37,8 +38,15 @@ public class StoreKeeperScreenController {
 
 
     public void showProductsInStock() {
-        products1 = XMLReturn.returnProductsIn("Stock", "product");
-
+        List<Product> p = new ArrayList<>();
+        p = XMLReturn.returnProductsIn("Stock", "product");
+        List<Product> p1 = new ArrayList<>();
+        for (int i = 0; i < p.size(); i++) {
+            if (p.get(i).getAmount() > 0) {
+                p1.add(p.get(i));
+            }
+        }
+        products1 = p1;
         modelStockColumn.setCellValueFactory(new PropertyValueFactory<Product, String>("model"));
         amountStockColumn.setCellValueFactory(new PropertyValueFactory<Product, Integer>("amount"));
 

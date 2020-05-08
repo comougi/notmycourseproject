@@ -3,29 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="82ed9098-a70a-4502-889a-e3edd88d3a36" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/AddBookScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/AddProductScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/AddInStockScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/AddInStockScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/AdminScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/AdminScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/SellerScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/SellerScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/StartScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/StartScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/og/Controllers/StoreKeeperScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/Controllers/StoreKeeperScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/FXMLHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/FXMLService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/MainClasses/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/MainClasses/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/MainClasses/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/MainClasses/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/MainClasses/XMLAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/MainClasses/XMLAdd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/MainClasses/XMLGet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/MainClasses/XMLGet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/MainClasses/XMLReturn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/MainClasses/XMLReturn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/MainClasses/XMLUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/MainClasses/XMLUpdate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/UI/AddBookScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/UI/AddProductScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/UI/AddInStockScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/UI/AddInStockScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/UI/AdminScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/UI/AdminScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/UI/SellerScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/UI/SellerScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/UI/StoreKeeperScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/UI/StoreKeeperScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/XMLs/Books" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/XMLs/Products" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/XMLs/Delivery" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/XMLs/Delivery" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/XMLs/NeedIt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/XMLs/NeedIt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/XMLs/SaleInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/XMLs/SaleInfo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/og/XMLs/Stock" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/og/XMLs/Stock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,10 +39,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="VisualVMLauncher" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.og.Main" />
       <module name="BookShop" />
@@ -88,13 +73,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.Main (1)" />
-      <item itemvalue="Application.Main" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -109,6 +89,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587037677757</updated>
+      <workItem from="1588938710197" duration="432000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1587038718621</created>
@@ -309,6 +290,9 @@
     <option name="localTasksCounter" value="29" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add empty field alerts" />
@@ -339,6 +323,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="rename button" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="249" y="0" key="#Project_Structure" timestamp="1588938719388">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.834@0.0.1536.834" timestamp="1588938719388" />
     <state x="536" y="219" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587071665916">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -423,9 +411,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="578" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1588170748417" />
-    <state x="209" y="38" key="new project wizard" timestamp="1587457946466">
+    <state x="209" y="38" key="new project wizard" timestamp="1588938853639">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="209" y="38" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1587457946466" />
+    <state x="209" y="38" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1588938853639" />
   </component>
 </project>
